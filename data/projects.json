@@ -1,0 +1,82 @@
+[
+  {
+    "title": "FootEducation",
+    "url": "https://footeducation.com",
+    "type": "Managed Site",
+    "tags": [
+      "Administration",
+      "Security",
+      "Performance",
+      "SEO"
+    ],
+    "blurb": "Encyclopedic patient education site about foot & ankle conditions. Ongoing maintenance, security hardening, uptime, and SEO support.",
+    "screenshot": "assets/screenshots/footeducation-home.png",
+    "caseStudy": "projects/footeducation.html"
+  },
+  {
+    "title": "OrthoEducation (Multisite)",
+    "url": "https://orthoeducation.com",
+    "type": "Managed Site",
+    "tags": [
+      "Multisite",
+      "Search UX",
+      "Plugin Dev",
+      "Performance"
+    ],
+    "blurb": "Network of subsites for musculoskeletal education. Implemented network search and multisite HTML sitemap; tuned UX and performance.",
+    "screenshot": "assets/screenshots/orthoeducation-home.png",
+    "caseStudy": "projects/orthoeducation.html"
+  },
+  {
+    "title": "Harmony Healing House",
+    "url": "https://harmonyhealinghouse.com",
+    "type": "Managed Site",
+    "tags": [
+      "Content",
+      "Design",
+      "Admin"
+    ],
+    "blurb": "Non-profit health & wellness. Content and site updates, light design support, and general administration.",
+    "screenshot": "assets/screenshots/hhh-home.png",
+    "caseStudy": "projects/harmonyhealinghouse.html"
+  },
+  {
+    "title": "Priority Practice Management",
+    "url": "https://prioritypracticemgt.com",
+    "type": "Managed Site",
+    "tags": [
+      "Admin",
+      "Content Ops",
+      "SEO Basics"
+    ],
+    "blurb": "MSO services site. Ongoing updates, analytics, and content coordination, plus LinkedIn marketing alignment.",
+    "screenshot": "assets/screenshots/ppm-home.png",
+    "caseStudy": "projects/ppm.html"
+  },
+  {
+    "title": "BayHealth LLC",
+    "url": "https://bayhealthllc.com",
+    "type": "Managed Site",
+    "tags": [
+      "Hosting",
+      "Maintenance",
+      "Performance"
+    ],
+    "blurb": "Healthcare joint venture site. Assisted with hosting, structure, and maintenance.",
+    "screenshot": "assets/screenshots/bayhealth-home.png",
+    "caseStudy": "projects/bayhealth.html"
+  },
+  {
+    "title": "Multisite HTML Sitemap & Network Search",
+    "url": "https://github.com/csmather/multisite-html-sitemap",
+    "type": "Project",
+    "tags": [
+      "WordPress",
+      "Plugin",
+      "Search"
+    ],
+    "blurb": "WordPress Multisite plugin: `[multisite_sitemap]`, `[network_search_form]`, and `[network_search]` with FootEducation integration.",
+    "screenshot": "assets/screenshots/mhs-plugin.png",
+    "caseStudy": "projects/mhs-plugin.html"
+  }
+]

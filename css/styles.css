@@ -1,0 +1,96 @@
+
+/* Scott Mather Portfolio — styles.css */
+/* Reset-ish */
+* { box-sizing: border-box; }
+html:focus-within { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+:root {
+  --bg: #0b1020;
+  --panel: #0f172a;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --brand: #38bdf8;
+  --brand-2: #a78bfa;
+  --ring: rgba(56, 189, 248, 0.5);
+  --shadow: 0 10px 25px rgba(2,6,23,0.5);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f8fafc;
+    --panel: #ffffff;
+    --text: #0f172a;
+    --muted: #475569;
+    --brand: #0ea5e9;
+    --brand-2: #7c3aed;
+    --ring: rgba(14,165,233,0.35);
+    --shadow: 0 10px 25px rgba(2,6,23,0.1);
+  }
+}
+
+/* Layout */
+.container { width: min(1100px, 92vw); margin: 0 auto; }
+.header {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(6px);
+  background: color-mix(in oklab, var(--bg), transparent 35%);
+  border-bottom: 1px solid color-mix(in oklab, var(--text), transparent 80%);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 0; }
+.brand { display:flex; align-items: center; gap: .6rem; text-decoration:none; color: var(--text); }
+.brand-logo { width: 28px; height: 28px; }
+.brand-name { font-weight: 700; letter-spacing: .2px; }
+nav a { color: var(--muted); text-decoration: none; margin-left: 1rem; }
+nav a:hover, nav a:focus { color: var(--text); }
+
+/* Hero */
+.hero { padding: 6rem 0 3rem; }
+.hero h1 { font-size: clamp(2rem, 2.2rem + 2vw, 3.6rem); line-height: 1.1; margin: 0 0 .6rem; }
+.hero p.kicker { color: var(--brand); font-weight: 600; letter-spacing: .6px; text-transform: uppercase; margin: 0 0 .4rem; }
+.hero p.sub { color: var(--muted); margin: .2rem 0 1.2rem; max-width: 65ch; }
+.ctas { display:flex; gap:.75rem; flex-wrap: wrap; }
+.btn {
+  display:inline-flex; align-items:center; gap:.5rem;
+  border: 1px solid color-mix(in oklab, var(--text), transparent 75%);
+  background: linear-gradient(180deg, color-mix(in oklab, var(--panel), var(--brand) 4%), var(--panel));
+  color: var(--text); text-decoration:none; padding:.7rem 1rem; border-radius: .75rem;
+  box-shadow: var(--shadow);
+}
+.btn.primary { border-color: color-mix(in oklab, var(--brand), transparent 40%); background: linear-gradient(180deg, color-mix(in oklab, var(--brand), var(--panel) 40%), var(--panel)); }
+.btn:hover, .btn:focus { outline: 2px solid transparent; box-shadow: 0 0 0 4px var(--ring); }
+.meta { color: var(--muted); font-size: .95rem; }
+
+/* Sections */
+section { padding: 2.5rem 0; }
+.section-title { font-size: 1.6rem; margin: 0 0 1rem; }
+.grid { display:grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+
+.card {
+  background: var(--panel); border: 1px solid color-mix(in oklab, var(--text), transparent 85%); border-radius: 1rem; overflow: clip;
+  transition: transform .15s ease;
+}
+.card:hover { transform: translateY(-2px); }
+.card img { width: 100%; height: 180px; object-fit: cover; background: #0b1220; }
+.card .pad { padding: 1rem; }
+.tags { display:flex; flex-wrap: wrap; gap: .4rem; margin:.4rem 0 .6rem; }
+.tag { font-size: .75rem; padding:.25rem .5rem; border-radius: .5rem; color: var(--brand); border:1px solid color-mix(in oklab, var(--brand), transparent 35%); }
+.card a.title { text-decoration: none; color: var(--text); font-weight: 700; }
+.card p { color: var(--muted); margin:.4rem 0 0; }
+
+/* About */
+.about { display:grid; gap: 1.5rem; grid-template-columns: 1fr; }
+@media (min-width: 820px){ .about { grid-template-columns: 1.2fr .8fr; align-items: start; } }
+.panel { background: var(--panel); border:1px solid color-mix(in oklab, var(--text), transparent 85%); border-radius: 1rem; padding: 1.2rem; }
+
+/* Footer */
+footer { padding: 2rem 0 3rem; color: var(--muted); }
+footer a { color: var(--text); }
+
+/* Accessibility helpers */
+.skip-link { position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden; }
+.skip-link:focus { left: 1rem; top: 1rem; width:auto; height:auto; background: var(--panel); color: var(--text); padding:.5rem .75rem; border-radius:.5rem; box-shadow: var(--shadow); }

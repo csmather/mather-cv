@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scott Mather — Website Admin & Developer</title>
+  <meta name="description" content="Scott Mather — Oakland‑based website administrator & developer. Fast, secure, maintainable sites for healthcare and beyond." />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="/">
+        <img class="brand-logo" alt="" src="assets/icons/favicon.svg" />
+        <span class="brand-name">Scott Mather</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero">
+      <div class="container">
+        <p class="kicker">Website Administration & Development</p>
+        <h1>Fast, secure, and maintainable websites.</h1>
+        <p class="sub">I’m Scott Mather — an Oakland‑based website administrator/developer focused on performance, security, SEO, and hands‑on WordPress problem solving. I keep complex sites humming and build the tools to make them easier to run.</p>
+        <div class="ctas">
+          <a class="btn primary" href="#work">View Work</a>
+          <a class="btn" href="assets/resume/Scott_Mather_Resume.pdf">Download Resume (PDF)</a>
+          <!-- CONTACT_CONFIG -->
+          <a class="btn" href="mailto:matherscottc@gmail.com">Email Me</a>
+        </div>
+        <p class="meta" style="margin-top:.75rem;">Based in Oakland, CA • Available for freelance & part‑time contracts</p>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <h2 class="section-title">Selected Work</h2>
+        <div id="projects-grid" class="grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container about">
+        <div class="panel">
+          <h3>Let’s keep your site healthy</h3>
+          <p>Whether you need proactive maintenance, migrations, plugin debugging, or a lightweight improvement sprint, I can help. I’m comfortable collaborating with agencies and in‑house teams.</p>
+          <div class="ctas">
+            <a class="btn primary" href="mailto:matherscottc@gmail.com">matherscottc@gmail.com</a>
+            <a class="btn" href="https://github.com/csmather" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/scottmather/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+        <div class="panel">
+          <h4>What I do</h4>
+          <ul>
+            <li>WordPress administration for single & multisite networks</li>
+            <li>Security hardening, WAFs, and uptime monitoring</li>
+            <li>Performance tuning (caching, queries, images, CDNs)</li>
+            <li>Search & SEO basics (structure, sitemaps, schema)</li>
+            <li>Light dev: custom plugins, theme fixes, and UX tweaks</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="y"></span> Scott Mather • Built with vanilla HTML/CSS/JS • Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

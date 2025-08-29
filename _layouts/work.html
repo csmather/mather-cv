@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<section class="section-page">
+  <div class="wrap">
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.external_url %}
+      <p class="meta"><a href="{{ page.external_url }}" target="_blank" rel="noopener">{{ page.external_url }}</a></p>
+    {% endif %}
+    <article class="panel">
+      {% if page.screenshot %}
+        <img class="hero-img" src="{{ page.screenshot | relative_url }}" alt="{{ page.title }} screenshot">
+      {% endif %}
+      {{ content }}
+    </article>
+  </div>
+</section>

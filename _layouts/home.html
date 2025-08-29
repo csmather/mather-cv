@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<section class="section-hero">
+  <div class="wrap">
+    <div class="hero-text reveal">
+      <p class="eyebrow">Website Administration & Development</p>
+      <h1>Keep your site fast, secure, and easy to run.</h1>
+      <p class="lede">I’m Scott Mather — an Oakland‑based website admin/developer focused on performance, security, SEO, and hands‑on WordPress ops.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#work">See Work</a>
+        <a class="btn" href="{{ '/assets/resume/Scott_Mather_Resume.pdf' | relative_url }}">Resume</a>
+        <a class="btn" href="mailto:matherscottc@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="hero-accent" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section id="work" class="section-work">
+  <div class="wrap">
+    <h2 class="h2">Selected Work</h2>
+    <div class="grid-work">
+      {% assign items = site.work | sort: 'order' %}
+      {% for item in items %}
+      <article class="tile reveal">
+        <a class="thumb" href="{{ item.url | relative_url }}">
+          <img src="{{ item.thumb | relative_url }}" alt="{{ item.title }} screenshot">
+        </a>
+        <div class="tile-body">
+          <h3 class="tile-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+          <ul class="tags">
+            {% for t in item.tags %}<li class="tag">{{ t }}</li>{% endfor %}
+          </ul>
+          <p class="muted">{{ item.summary }}</p>
+          <p class="meta"><a href="{{ item.external_url }}" target="_blank" rel="noopener">Visit site ↗</a></p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

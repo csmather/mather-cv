@@ -1,0 +1,15 @@
+title: "Scott Mather — Portfolio"
+description: "Oakland-based website administrator & developer."
+url: ""        # e.g., https://<username>.github.io
+baseurl: ""    # set to "/<repo-name>" for project sites
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+collections:
+  work:
+    output: true
+    permalink: /work/:name/
+defaults:
+  - scope: { path: "", type: work }
+    values: { layout: work }
+markdown: kramdown

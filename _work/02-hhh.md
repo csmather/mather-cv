@@ -4,8 +4,8 @@ order: 2
 external_url: "https://harmonyhealinghouse.com"
 thumb: "assets/screenshots/hhh.png"
 screenshot: "assets/screenshots/hhh.png"
-tags: ["Content","Design","Admin"]
-summary: "Non-profit health & wellness. Content updates, light design, admin."
+tags: ["Design", "Content Ops", "Admin"]
+summary: "Health & wellness site. Content updates, design, admin."
 ---
 
 ## My role & impact

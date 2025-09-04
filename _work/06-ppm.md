@@ -5,7 +5,7 @@ external_url: "https://prioritypracticemgt.com"
 thumb: "assets/screenshots/ppm.png"
 screenshot: "assets/screenshots/ppm.png"
 tags: ["Admin","Content Ops","SEO Basics"]
-summary: "MSO services site. Updates, analytics, content coordination."
+summary: "Management Services Organization site. Updates, analytics, content coordination."
 ---
 
 ## My role & impact

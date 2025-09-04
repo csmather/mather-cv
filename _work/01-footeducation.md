@@ -5,7 +5,7 @@ external_url: "https://footeducation.com"
 thumb: "assets/screenshots/footeducation.png"
 screenshot: "assets/screenshots/footeducation.png"
 tags: ["Administration","Security","Performance","SEO"]
-summary: "Encyclopedic patient-education site. Maintenance, security, uptime, SEO."
+summary: "Encyclopedic patient-education site. Maintenance, security, design, SEO."
 ---
 
 ## My role & impact

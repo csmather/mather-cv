@@ -4,7 +4,7 @@ order: 5
 external_url: "https://cancersupportsonoma.org"
 thumb: "assets/screenshots/cancersupportsonoma.png"
 screenshot: "assets/screenshots/cancersupportsonoma.png"
-tags: ["Volunteer","Maintenance","WordPress"]
+tags: ["Volunteer","Maintenance","Wix"]
 summary: "Volunteer webmaster; ongoing maintenance and content support."
 ---
 

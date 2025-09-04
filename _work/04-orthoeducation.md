@@ -4,8 +4,8 @@ order: 4
 external_url: "https://orthoeducation.com"
 thumb: "assets/screenshots/orthoeducation.png"
 screenshot: "assets/screenshots/orthoeducation.png"
-tags: ["Multisite","Search UX","Plugin Dev","Performance"]
-summary: "Network of subsites. Multisite sitemap & network search; UX/perf tuning."
+tags: ["Administration","UX","Plugin Dev","Performance"]
+summary: "Network of subsites for patient-education. Wordpress multisite sitemap & network search; UX/perf tuning."
 ---
 
 ## My role & impact

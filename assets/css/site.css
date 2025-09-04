@@ -60,11 +60,12 @@ small,.small{font-size:.9rem;color:var(--muted)}
 .tag{font-size:.75rem;padding:.2rem .5rem;border-radius:.5rem;border:1px solid color-mix(in oklab,var(--brand),transparent 45%);color:var(--brand)}
 .muted{color:var(--muted)}
 .meta{color:var(--muted);font-size:.95rem}
+.tile .meta a{color:var(--brand)}
 /* Page */
 .section-page{padding:2.2rem 0 3rem}
 .page-title{margin:0 0 .6rem}
 .panel{background:var(--surface);border:1px solid var(--border);border-radius:1rem;padding:1.2rem}
-.hero-img{width:100%;height:360px;object-fit:cover;border-radius:.6rem;margin:0 0 1rem}
+.hero-img{width:100%;height:auto;border-radius:.6rem;margin:0 0 1rem;display:block}
 /* Reveal animations */
 .reveal{opacity:0;transform:translateY(12px);transition:.6s ease}
 .reveal.is-visible{opacity:1;transform:none}

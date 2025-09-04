@@ -1,9 +1,9 @@
 ---
 title: "OrthoEducation (Multisite)"
-order: 2
+order: 4
 external_url: "https://orthoeducation.com"
-thumb: "assets/screenshots/orthoeducation.svg"
-screenshot: "assets/screenshots/orthoeducation.svg"
+thumb: "assets/screenshots/orthoeducation.png"
+screenshot: "assets/screenshots/orthoeducation.png"
 tags: ["Multisite","Search UX","Plugin Dev","Performance"]
 summary: "Network of subsites. Multisite sitemap & network search; UX/perf tuning."
 ---

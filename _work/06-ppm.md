@@ -1,9 +1,9 @@
 ---
 title: "Priority Practice Management"
-order: 4
+order: 6
 external_url: "https://prioritypracticemgt.com"
-thumb: "assets/screenshots/ppm.svg"
-screenshot: "assets/screenshots/ppm.svg"
+thumb: "assets/screenshots/ppm.png"
+screenshot: "assets/screenshots/ppm.png"
 tags: ["Admin","Content Ops","SEO Basics"]
 summary: "MSO services site. Updates, analytics, content coordination."
 ---

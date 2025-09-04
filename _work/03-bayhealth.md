@@ -1,9 +1,9 @@
 ---
 title: "BayHealth LLC"
-order: 5
+order: 3
 external_url: "https://bayhealthllc.com"
-thumb: "assets/screenshots/bayhealth.svg"
-screenshot: "assets/screenshots/bayhealth.svg"
+thumb: "assets/screenshots/bayhealth.png"
+screenshot: "assets/screenshots/bayhealth.png"
 tags: ["Hosting","Maintenance","Performance"]
 summary: "Healthcare joint venture site. Hosting/structure help, maintenance."
 ---
@@ -13,3 +13,4 @@ summary: "Healthcare joint venture site. Hosting/structure help, maintenance."
 
 ## Highlights
 - Add Core Web Vitals deltas, security outcomes, and SEO structure changes.
+

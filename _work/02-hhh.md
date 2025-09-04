@@ -1,9 +1,9 @@
 ---
 title: "Harmony Healing House"
-order: 3
+order: 2
 external_url: "https://harmonyhealinghouse.com"
-thumb: "assets/screenshots/hhh.svg"
-screenshot: "assets/screenshots/hhh.svg"
+thumb: "assets/screenshots/hhh.png"
+screenshot: "assets/screenshots/hhh.png"
 tags: ["Content","Design","Admin"]
 summary: "Non-profit health & wellness. Content updates, light design, admin."
 ---

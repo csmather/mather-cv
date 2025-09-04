@@ -1,9 +1,9 @@
 ---
 title: "Cancer Support Sonoma"
-order: 7
+order: 5
 external_url: "https://cancersupportsonoma.org"
-thumb: "assets/screenshots/cancersupportsonoma.svg"
-screenshot: "assets/screenshots/cancersupportsonoma.svg"
+thumb: "assets/screenshots/cancersupportsonoma.png"
+screenshot: "assets/screenshots/cancersupportsonoma.png"
 tags: ["Volunteer","Maintenance","WordPress"]
 summary: "Volunteer webmaster; ongoing maintenance and content support."
 ---

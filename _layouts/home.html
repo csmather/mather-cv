@@ -13,7 +13,6 @@ layout: default
         <a class="btn" href="mailto:matherscottc@gmail.com">Email</a>
       </div>
     </div>
-
   </div>
   
 </section>
@@ -22,7 +21,7 @@ layout: default
   <div class="wrap">
     <h2 class="h2">Selected Work</h2>
     <div class="grid-work">
-      {% assign items = site.work | sort: 'order' %}
+      {% assign items = site.work | where_exp: 'item', 'item.hidden != true' | sort: 'order' %}
       {% for item in items %}
       <article class="tile reveal">
         <a class="thumb" href="{{ item.url | relative_url }}">
@@ -41,4 +40,3 @@ layout: default
     </div>
   </div>
 </section>
-

@@ -49,8 +49,8 @@ small,.small{font-size:.9rem;color:var(--muted)}
 .section-work{padding:2rem 0 3rem}
 .h2{font-size:clamp(1.6rem,1.2rem + 1.2vw,2rem);margin:0 0 1rem}
 .grid-work{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
-.tile{background:var(--surface);border:1px solid var(--border);border-radius:1rem;overflow:clip;transition:transform .22s ease-in-out;will-change:transform;transform:translateZ(0)}
-.tile:hover,.tile:focus-within{transform:translateY(-3px) scale(1.02)}
+.tile{background:var(--surface);border:1px solid var(--border);border-radius:1rem;overflow:clip;transition:transform .22s ease-in-out;will-change:transform;transform:translateZ(0);position:relative}
+.tile:hover,.tile:focus-within{transform:none}
 .tile .thumb{display:block;aspect-ratio:1900/1080;overflow:hidden}
 .tile .thumb img{width:100%;height:100%;object-fit:cover;display:block;background:#0b1220;transition:transform .22s ease-in-out;transform:translateZ(0)}
 .tile:hover .thumb img,.tile:focus-within .thumb img{transform:none}
@@ -72,8 +72,21 @@ small,.small{font-size:.9rem;color:var(--muted)}
 /* Avoid transform conflicts on tiles using reveal */
 .tile.reveal{opacity:0;transform:none}
 .tile.reveal.is-visible{opacity:1}
-/* Ensure hover transform applies for tiles after reveal becomes visible */
-.tile.reveal.is-visible:hover,
-.tile.reveal.is-visible:focus-within{transform:translateY(-3px) scale(1.02)}
+/* Draw-on-hover accent border for tiles */
+.tile::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:
+    linear-gradient(var(--brand),var(--brand)) 0 0 / 0 2px no-repeat,
+    linear-gradient(var(--brand),var(--brand)) 100% 0 / 2px 0 no-repeat,
+    linear-gradient(var(--brand),var(--brand)) 100% 100% / 0 2px no-repeat,
+    linear-gradient(var(--brand),var(--brand)) 0 100% / 2px 0 no-repeat;
+}
+.tile:hover::after,.tile:focus-within::after{animation:draw-border 1s linear forwards}
+@keyframes draw-border{
+  0%   {background-size:0 2px,2px 0,0 2px,2px 0}
+  25%  {background-size:100% 2px,2px 0,0 2px,2px 0}
+  50%  {background-size:100% 2px,2px 100%,0 2px,2px 0}
+  75%  {background-size:100% 2px,2px 100%,100% 2px,2px 0}
+  100% {background-size:100% 2px,2px 100%,100% 2px,2px 100%}
+}
 /* Footer */
 .site-foot{padding:2rem 0 3rem;color:var(--muted)}

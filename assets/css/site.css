@@ -35,6 +35,7 @@ small,.small{font-size:.9rem;color:var(--muted)}
 .brand{font-weight:700}
 .site-nav a{color:var(--muted);margin-left:1rem}
 .site-nav a:hover,.site-nav a:focus{color:var(--ink)}
+.site-nav a[href*="upwork.com"]:hover,.site-nav a[href*="upwork.com"]:focus{color:#108a00}
 /* Hero */
 .section-hero{padding:5.5rem 0 2.5rem}
 .hero-text .eyebrow{color:var(--brand);text-transform:uppercase;letter-spacing:.06em;font-weight:700;margin:0 0 .25rem}

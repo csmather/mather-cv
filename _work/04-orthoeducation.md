@@ -9,7 +9,8 @@ summary: "Network of subsites for patient-education. Wordpress multisite sitemap
 ---
 
 ## My role & impact
-- Replace with concrete actions/results (security, performance, SEO, migrations).
+- Led consolidation of multiple orthopedic education sites into a unified subdomain architecture, driving sustained organic search visibility growth as migration and indexing stabilized.
+- Managed the Wordpress Multisite network, ensuring consistent performance and subsite-specific customizations
+- Drove a **33x increase** in Google Search impressions over a one year period
+- Optimized site performance via Siteground hosting infrastructure
 
-## Highlights
-- Add Core Web Vitals deltas, security outcomes, and SEO structure changes.

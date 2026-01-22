@@ -9,8 +9,8 @@ summary: "Healthcare joint venture site. Hosting/structure help, maintenance, Wo
 ---
 
 ## My role & impact
-- Replace with concrete actions/results (security, performance, SEO, migrations).
-
-## Highlights
-- Add Core Web Vitals deltas, security outcomes, and SEO structure changes.
+- Oversaw the full migration of the BayHealth website between different hosting providers, ensuring a smooth transition with no major downtime.
+- Coordinated the handoff from a large web design/hosting firm to a smaller provider after auditing the site to identify potential break points.
+- Rebuilt the entire website from the ground up using Divi CMS, replacing the previous ACF-based layout.
+- Recreated the site design to visually match the prior version while reducing complexity, enabling future editing without developer interaction.
 

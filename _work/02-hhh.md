@@ -9,7 +9,8 @@ summary: "Health & wellness site. Content updates, design, admin."
 ---
 
 ## My role & impact
-- Replace with concrete actions/results (security, performance, SEO, migrations).
+- Built and maintained the full Harmony Healing House website, managing design, content architecture, and ongoing technical improvements.
+- Expanded site features to support and promote book releases as well as community events.
+- Supported content strategy and brand identity for community outreach.
+- Served as the sole developer for the Health & Happiness Hub of Sonoma Valley, implementing a scalable CMS structure to maintain ongoing additions of regional resources, services, and programs.
 
-## Highlights
-- Add Core Web Vitals deltas, security outcomes, and SEO structure changes.

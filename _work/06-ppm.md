@@ -9,7 +9,8 @@ summary: "Management Services Organization site. Updates, analytics, content coo
 ---
 
 ## My role & impact
-- Replace with concrete actions/results (security, performance, SEO, migrations).
+- Helped establish Priority Practice Management’s initial WordPress website, configuring the theme, core pages, and foundational site structure.
+- Provided technical support during their onboarding into WordPress, hosting, and plugin management.
+- Served as the primary creator of LinkedIn content, publishing twice-weekly posts centered on healthcare operations, private practice management, and physician-focused guidance.
+- Researched relevant healthcare topics—CMS updates, value-based care, practice growth, operational efficiency—and translated them into clear, engaging posts.
 
-## Highlights
-- Add Core Web Vitals deltas, security outcomes, and SEO structure changes.

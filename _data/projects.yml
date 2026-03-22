@@ -1,0 +1,19 @@
+- title: "Project Name 1"
+  description: "Brief description of what this project does and its purpose."
+  github_url: "https://github.com/username/project-1"
+  tags: ["Python", "API"]
+
+- title: "Project Name 2"
+  description: "Brief description of what this project does and its purpose."
+  github_url: "https://github.com/username/project-2"
+  tags: ["JavaScript", "React"]
+
+- title: "Project Name 3"
+  description: "Brief description of what this project does and its purpose."
+  github_url: "https://github.com/username/project-3"
+  tags: ["WordPress", "PHP"]
+
+- title: "Project Name 4"
+  description: "Brief description of what this project does and its purpose."
+  github_url: "https://github.com/username/project-4"
+  tags: ["Node.js", "Express"]

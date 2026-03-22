@@ -41,3 +41,23 @@ layout: default
     </div>
   </div>
 </section>
+
+<section id="projects" class="section-projects">
+  <div class="wrap">
+    <h2 class="h2">Projects</h2>
+    <div class="grid-projects">
+      {% for project in site.data.projects %}
+      <article class="project-tile reveal">
+        <div class="project-body">
+          <h3 class="project-title">{{ project.title }}</h3>
+          <ul class="tags">
+            {% for t in project.tags %}<li class="tag">{{ t }}</li>{% endfor %}
+          </ul>
+          <p class="muted">{{ project.description }}</p>
+          <p class="meta"><a href="{{ project.github_url }}" target="_blank" rel="noopener">View on GitHub &rarr;</a></p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -81,5 +81,21 @@ small,.small{font-size:.9rem;color:var(--muted)}
 .tile .tile-title a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--brand);border-radius:2px;transition:width 1s ease-in-out}
 .tile:hover .tile-title a::after,
 .tile:focus-within .tile-title a::after{width:100%}
+/* Projects grid */
+.section-projects{padding:2rem 0 3rem}
+.grid-projects{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.project-tile{background:var(--surface);border:1px solid var(--border);border-radius:1rem;overflow:clip;transition:transform .22s ease-in-out}
+.project-tile:hover,.project-tile:focus-within{transform:none}
+.project-body{padding:1.2rem}
+.project-title{margin:0 0 .1rem}
+.project-tile .meta a{color:var(--brand)}
+/* Title underline animation on project tile hover */
+.project-tile .project-title{position:relative;display:inline-block}
+.project-tile .project-title::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--brand);border-radius:2px;transition:width .3s ease-in-out}
+.project-tile:hover .project-title::after,
+.project-tile:focus-within .project-title::after{width:100%}
+/* Reveal animations for project tiles */
+.project-tile.reveal{opacity:0;transform:none}
+.project-tile.reveal.is-visible{opacity:1}
 /* Footer */
 .site-foot{padding:2rem 0 3rem;color:var(--muted)}

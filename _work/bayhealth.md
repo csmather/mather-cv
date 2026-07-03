@@ -1,6 +1,6 @@
 ---
 title: "BayHealth LLC"
-order: 3
+order: 6
 external_url: "https://bayhealthllc.com"
 thumb: "assets/screenshots/bayhealth.png"
 screenshot: "assets/screenshots/bayhealth.png"

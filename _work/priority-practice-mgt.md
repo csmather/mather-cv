@@ -1,6 +1,6 @@
 ---
 title: "Priority Practice Management"
-order: 6
+order: 8
 external_url: "https://prioritypracticemgt.com"
 thumb: "assets/screenshots/ppm.png"
 screenshot: "assets/screenshots/ppm.png"

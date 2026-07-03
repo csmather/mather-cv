@@ -1,19 +1,12 @@
-- title: "Project Name 1"
-  description: "Brief description of what this project does and its purpose."
-  github_url: "https://github.com/username/project-1"
-  tags: ["Python", "API"]
+- title: "Multisite HTML Sitemap & Network Search"
+  description: "WordPress mu-plugin providing an auto-updating network-wide HTML sitemap and cross-site search. Running in production across a nine-subsite multisite network."
+  github_url: "https://github.com/csmather/multisite-html-sitemap"
+  tags: ["WordPress", "PHP", "Multisite"]
 
-- title: "Project Name 2"
-  description: "Brief description of what this project does and its purpose."
-  github_url: "https://github.com/username/project-2"
-  tags: ["JavaScript", "React"]
+- title: "Elementor → Gutenberg Migrator"
+  description: "WP-CLI tool that migrates pages off Elementor to native Gutenberg blocks: extracts real content from the builder's data layer, keeps per-page backups, and verifies integrity on write-back. Migrated a 266-page medical textbook with zero failures."
+  tags: ["PHP", "WP-CLI", "WordPress"]
 
-- title: "Project Name 3"
-  description: "Brief description of what this project does and its purpose."
-  github_url: "https://github.com/username/project-3"
-  tags: ["WordPress", "PHP"]
-
-- title: "Project Name 4"
-  description: "Brief description of what this project does and its purpose."
-  github_url: "https://github.com/username/project-4"
-  tags: ["Node.js", "Express"]
+- title: "Visual Smoke-Test Runner"
+  description: "Screenshot-based regression check used during multi-phase site cleanups — snapshots key pages before and after each change so breakage shows up immediately. Verified 27 pages per pass across a multisite network."
+  tags: ["Playwright", "Testing", "Automation"]

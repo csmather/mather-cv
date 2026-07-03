@@ -1,6 +1,6 @@
 ---
 title: "Harmony Healing House"
-order: 2
+order: 7
 external_url: "https://harmonyhealinghouse.com"
 thumb: "assets/screenshots/hhh.png"
 screenshot: "assets/screenshots/hhh.png"

@@ -6,7 +6,7 @@ layout: default
     <div class="hero-text reveal">
       <!-- <p class="eyebrow">Website Administration & Development</p> -->
       <h1>Scott Mather</h1>
-      <p class="lede">Oakland-based website admin/developer focused on performance, security, SEO, and hands-on WordPress ops.</p>
+      <p class="lede">Oakland-based website admin/developer focused on security, performance, SEO, and hands-on WordPress and server ops.</p>
       <div class="cta-row">
         <a class="btn primary" href="#work">See Work</a>
         <a class="btn" href="{{ '/assets/resume/Scott_Mather_Resume.pdf' | relative_url }}">Resume</a>
@@ -54,7 +54,7 @@ layout: default
             {% for t in project.tags %}<li class="tag">{{ t }}</li>{% endfor %}
           </ul>
           <p class="muted">{{ project.description }}</p>
-          <p class="meta"><a href="{{ project.github_url }}" target="_blank" rel="noopener">View on GitHub &rarr;</a></p>
+          {% if project.github_url %}<p class="meta"><a href="{{ project.github_url }}" target="_blank" rel="noopener">View on GitHub &rarr;</a></p>{% endif %}
         </div>
       </article>
       {% endfor %}

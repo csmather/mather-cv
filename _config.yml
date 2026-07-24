@@ -1,7 +1,7 @@
 title: "Scott Mather — Portfolio"
 description: "Oakland-based website administrator & developer."
-url: "https://csmather.github.io"        # e.g., https://<username>.github.io
-baseurl: "/mather-cv"    # set to "/<repo-name>" for project sites
+url: "https://csmather.com"        # e.g., https://<username>.github.io
+baseurl: ""    # set to "/<repo-name>" for project sites
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap

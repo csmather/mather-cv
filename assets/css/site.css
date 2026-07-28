@@ -60,6 +60,7 @@ small,.small{font-size:.9rem;color:var(--muted)}
 .tags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.4rem 0 .6rem;padding:0;list-style:none}
 .tag{font-size:.75rem;padding:.2rem .5rem;border-radius:.5rem;border:1px solid color-mix(in oklab,var(--brand),transparent 45%);color:var(--brand)}
 .muted{color:var(--muted)}
+.section-intro{margin:-.5rem 0 1.5rem}
 .meta{color:var(--muted);font-size:.95rem}
 .tile .meta a{color:var(--brand)}
 /* Page */

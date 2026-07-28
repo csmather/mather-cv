@@ -9,7 +9,12 @@ collections:
   work:
     output: true
     permalink: /work/:name/
+  projects:
+    output: true
+    permalink: /projects/:name/
 defaults:
   - scope: { path: "", type: work }
     values: { layout: work }
+  - scope: { path: "", type: projects }
+    values: { layout: project }
 markdown: kramdown

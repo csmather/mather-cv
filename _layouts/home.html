@@ -6,16 +6,28 @@ layout: default
     <div class="hero-text reveal">
       <!-- <p class="eyebrow">Website Administration & Development</p> -->
       <h1>Scott Mather</h1>
-      <p class="lede">Oakland-based website admin/developer focused on security, performance, SEO, and hands-on WordPress and server ops &mdash; and always building tools of my own along the way.</p>
+      <p class="lede">Oakland-based website admin/developer focused on security, performance, SEO, and hands-on WordPress and server ops, and always building tools of my own along the way.</p>
       <div class="cta-row">
         <a class="btn primary" href="#work">See Work</a>
         <a class="btn" href="{{ '/assets/resume/Scott_Mather_Resume.pdf' | relative_url }}">Resume</a>
         <a class="btn" href="mailto:matherscottc@gmail.com">Email</a>
         <a class="btn btn-upwork" href="https://www.upwork.com/freelancers/~01cffd1fbaa3d0408c">Upwork</a>
+        <a class="btn" href="https://github.com/csmather">GitHub</a>
       </div>
     </div>
   </div>
   
+</section>
+
+<section id="case-study" class="section-case">
+  <div class="wrap">
+    <div class="case-banner reveal">
+      <p class="eyebrow">Case Study</p>
+      <h2 class="h2"><a href="{{ '/case-studies/site-ops/' | relative_url }}">How I Work: Rescuing a Medical Education Network</a></h2>
+      <p class="muted">Three neglected properties, one departed vendor, six months of solo remediation: pirated software replaced, 197 phantom pages killed at DNS, a 2.1&nbsp;GB database cut to 166&nbsp;MB, and zero editor-facing breakage. The full story of how I actually work.</p>
+      <p class="meta"><a href="{{ '/case-studies/site-ops/' | relative_url }}">Read the case study &rarr;</a></p>
+    </div>
+  </div>
 </section>
 
 <section id="work" class="section-work">
@@ -45,7 +57,7 @@ layout: default
 <section id="tooling" class="section-projects">
   <div class="wrap">
     <h2 class="h2">Ops &amp; Tooling</h2>
-    <p class="muted section-intro">Tools built for &mdash; and battle-tested on &mdash; the sites above.</p>
+    <p class="muted section-intro">Tools custom-built for the sites above.</p>
     <div class="grid-projects">
       {% for project in site.data.projects %}
       <article class="project-tile reveal">
@@ -66,7 +78,7 @@ layout: default
 <section id="projects" class="section-projects">
   <div class="wrap">
     <h2 class="h2">Personal Projects</h2>
-    <p class="muted section-intro">What I build off the clock &mdash; music discovery experiments, language toys, and tools that scratch a specific itch. Self-taught, terminal-native, built with Claude Code.</p>
+    <p class="muted section-intro">Fully self-taught projects I've created to explore Music Recommender Systems &amp; Information Retrieval, quality of life, specific tooling, and just for fun.</p>
     <div class="grid-projects">
       {% assign pitems = site.projects | sort: 'order' %}
       {% for item in pitems %}

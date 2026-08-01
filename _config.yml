@@ -18,3 +18,10 @@ defaults:
   - scope: { path: "", type: projects }
     values: { layout: project }
 markdown: kramdown
+exclude:
+  - docs/
+  - CLAUDE.md
+  - preview.sh
+  - vendor/
+  - Gemfile
+  - Gemfile.lock

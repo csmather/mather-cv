@@ -37,7 +37,7 @@ small,.small{font-size:.9rem;color:var(--muted)}
 .site-nav a:hover,.site-nav a:focus{color:var(--ink)}
 /* Hero */
 .section-hero{padding:5.5rem 0 2.5rem}
-.hero-text .eyebrow{color:var(--brand);text-transform:uppercase;letter-spacing:.06em;font-weight:700;margin:0 0 .25rem}
+.hero-text .eyebrow,.case-banner .eyebrow{color:var(--brand);text-transform:uppercase;letter-spacing:.06em;font-weight:700;margin:0 0 .25rem}
 .hero-text h1{font-size:clamp(2.2rem,1.4rem + 2.6vw,3.5rem);line-height:1.08;margin:.1rem 0 .5rem}
 .hero-text .lede{color:var(--muted);max-width:66ch;margin:0 0 1rem}
 .cta-row{display:flex;gap:.6rem;flex-wrap:wrap}
@@ -61,6 +61,9 @@ small,.small{font-size:.9rem;color:var(--muted)}
 .tag{font-size:.75rem;padding:.2rem .5rem;border-radius:.5rem;border:1px solid color-mix(in oklab,var(--brand),transparent 45%);color:var(--brand)}
 .muted{color:var(--muted)}
 .section-intro{margin:-.5rem 0 1.5rem}
+.case-banner{border:1px solid var(--line,rgba(128,128,128,.25));border-radius:12px;padding:1.5rem 1.75rem}
+.case-banner .h2{margin-bottom:.5rem}
+.case-banner p{margin:.35rem 0}
 .meta{color:var(--muted);font-size:.95rem}
 .tile .meta a{color:var(--brand)}
 /* Page */

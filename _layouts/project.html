@@ -1,15 +1,11 @@
 ---
 layout: default
 ---
-<section class="section-page">
-  <div class="wrap">
-    <h1 class="page-title">{{ page.title }}</h1>
-    <p class="meta">
-      {% if page.github_url %}<a href="{{ page.github_url }}" target="_blank" rel="noopener">View on GitHub &rarr;</a>{% endif %}
-      {% if page.external_url %} &nbsp;&middot;&nbsp; <a href="{{ page.external_url }}" target="_blank" rel="noopener">Try it live &rarr;</a>{% endif %}
-    </p>
-    <article class="panel">
-      {{ content }}
-    </article>
-  </div>
-</section>
+<div class="wrap page">
+  <h1>{{ page.title }}</h1>
+  <p class="meta page-meta">
+    {% if page.github_url %}<a href="{{ page.github_url }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
+    {% if page.external_url %} · <a href="{{ page.external_url }}" target="_blank" rel="noopener">try it ↗</a>{% endif %}
+  </p>
+  {{ content }}
+</div>

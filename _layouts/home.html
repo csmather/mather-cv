@@ -1,102 +1,48 @@
 ---
 layout: default
 ---
-<section class="section-hero">
-  <div class="wrap">
-    <div class="hero-text reveal">
-      <!-- <p class="eyebrow">Website Administration & Development</p> -->
-      <h1>Scott Mather</h1>
-      <p class="lede">Oakland-based website admin/developer focused on security, performance, SEO, and hands-on WordPress and server ops, and always building tools of my own along the way.</p>
-      <div class="cta-row">
-        <a class="btn primary" href="#work">See Work</a>
-        <a class="btn" href="{{ '/assets/resume/Scott_Mather_Resume.pdf' | relative_url }}">Resume</a>
-        <a class="btn" href="mailto:matherscottc@gmail.com">Email</a>
-        <a class="btn btn-upwork" href="https://www.upwork.com/freelancers/~01cffd1fbaa3d0408c">Upwork</a>
-        <a class="btn" href="https://github.com/csmather">GitHub</a>
-      </div>
-    </div>
-  </div>
-  
-</section>
+<div class="wrap home">
 
-<section id="case-study" class="section-case">
-  <div class="wrap">
-    <div class="case-banner reveal">
-      <p class="eyebrow">Case Study</p>
-      <h2 class="h2"><a href="{{ '/case-studies/site-ops/' | relative_url }}">How I Work: Rescuing a Medical Education Network</a></h2>
-      <p class="muted">Three neglected properties, one departed vendor, six months of solo remediation: pirated software replaced, 197 phantom pages killed at DNS, a 2.1&nbsp;GB database cut to 166&nbsp;MB, and zero editor-facing breakage. The full story of how I actually work.</p>
-      <p class="meta"><a href="{{ '/case-studies/site-ops/' | relative_url }}">Read the case study &rarr;</a></p>
-    </div>
-  </div>
-</section>
+  <h1>Scott Mather</h1>
+  <p class="lede">Oakland-based website admin/developer focused on security, performance, SEO, and hands-on WordPress and server ops, and always building tools of my own along the way.</p>
+  <p class="contact"><a href="mailto:matherscottc@gmail.com">matherscottc@gmail.com</a> &middot; <a href="{{ '/assets/resume/Scott_Mather_Resume.pdf' | relative_url }}">resume</a> &middot; Oakland, CA</p>
 
-<section id="work" class="section-work">
-  <div class="wrap">
-    <h2 class="h2">Selected Work</h2>
-    <div class="grid-work">
-      {% assign items = site.work | where_exp: 'item', 'item.hidden != true' | sort: 'order' %}
-      {% for item in items %}
-      <article class="tile reveal">
-        <a class="thumb" href="{{ item.url | relative_url }}">
-          <img src="{{ item.thumb | relative_url }}" alt="{{ item.title }} screenshot">
-        </a>
-        <div class="tile-body">
-          <h3 class="tile-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-          <ul class="tags">
-            {% for t in item.tags %}<li class="tag">{{ t }}</li>{% endfor %}
-          </ul>
-          <p class="muted">{{ item.summary }}</p>
-          <p class="meta"><a href="{{ item.external_url }}" target="_blank" rel="noopener">Visit site →</a></p>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+  <h2 id="case-study">Case Study</h2>
+  <p>
+    <strong><a href="{{ '/case-studies/site-ops/' | relative_url }}">How I Work: Rescuing a Medical Education Network</a></strong><br>
+    Three neglected properties, one departed vendor, six months of solo remediation: pirated software replaced, 197 phantom pages killed at DNS, a 2.1&nbsp;GB database cut to 166&nbsp;MB, and zero editor-facing breakage.
+  </p>
 
-<section id="tooling" class="section-projects">
-  <div class="wrap">
-    <h2 class="h2">Ops &amp; Tooling</h2>
-    <p class="muted section-intro">Tools custom-built for the sites above.</p>
-    <div class="grid-projects">
-      {% for project in site.data.projects %}
-      <article class="project-tile reveal">
-        <div class="project-body">
-          <h3 class="project-title">{{ project.title }}</h3>
-          <ul class="tags">
-            {% for t in project.tags %}<li class="tag">{{ t }}</li>{% endfor %}
-          </ul>
-          <p class="muted">{{ project.description }}</p>
-          {% if project.github_url %}<p class="meta"><a href="{{ project.github_url }}" target="_blank" rel="noopener">View on GitHub &rarr;</a></p>{% endif %}
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+  <h2 id="work">Selected Work</h2>
+  {% assign items = site.work | where_exp: 'item', 'item.hidden != true' | sort: 'order' %}
+  {% for item in items %}
+  <article class="entry">
+    <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+    <p class="tags">{{ item.tags | join: ' · ' }}{% if item.external_url %} · <a href="{{ item.external_url }}" target="_blank" rel="noopener">{{ item.external_url | replace: 'https://', '' | replace: 'http://', '' }} ↗</a>{% endif %}</p>
+    <p>{{ item.summary }}</p>
+  </article>
+  {% endfor %}
 
-<section id="projects" class="section-projects">
-  <div class="wrap">
-    <h2 class="h2">Personal Projects</h2>
-    <p class="muted section-intro">Fully self-taught projects I've created to explore Music Recommender Systems &amp; Information Retrieval, quality of life, specific tooling, and just for fun.</p>
-    <div class="grid-projects">
-      {% assign pitems = site.projects | sort: 'order' %}
-      {% for item in pitems %}
-      <article class="project-tile reveal">
-        <div class="project-body">
-          <h3 class="project-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-          <ul class="tags">
-            {% for t in item.tags %}<li class="tag">{{ t }}</li>{% endfor %}
-          </ul>
-          <p class="muted">{{ item.summary }}</p>
-          <p class="meta">
-            {% if item.github_url %}<a href="{{ item.github_url }}" target="_blank" rel="noopener">GitHub &rarr;</a>{% endif %}
-            {% if item.external_url %} &nbsp;&middot;&nbsp; <a href="{{ item.external_url }}" target="_blank" rel="noopener">Try it &rarr;</a>{% endif %}
-          </p>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-    <p class="meta"><a href="https://github.com/csmather" target="_blank" rel="noopener">More on GitHub &rarr;</a></p>
-  </div>
-</section>
+  <h2 id="tooling">Ops &amp; Tooling</h2>
+  <p class="muted section-intro">Tools custom-built for the sites above.</p>
+  {% for project in site.data.projects %}
+  <article class="entry">
+    <h3>{{ project.title }}</h3>
+    <p class="tags">{{ project.tags | join: ' · ' }}{% if project.github_url %} · <a href="{{ project.github_url }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}</p>
+    <p>{{ project.description }}</p>
+  </article>
+  {% endfor %}
+
+  <h2 id="projects">Personal Projects</h2>
+  <p class="muted section-intro">Fully self-taught projects I've created to explore Music Recommender Systems &amp; Information Retrieval, quality of life, specific tooling, and just for fun.</p>
+  {% assign pitems = site.projects | sort: 'order' %}
+  {% for item in pitems %}
+  <article class="entry">
+    <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+    <p class="tags">{{ item.tags | join: ' · ' }}{% if item.github_url %} · <a href="{{ item.github_url }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}{% if item.external_url %} · <a href="{{ item.external_url }}" target="_blank" rel="noopener">try it ↗</a>{% endif %}</p>
+    <p>{{ item.summary }}</p>
+  </article>
+  {% endfor %}
+  <p class="meta"><a href="https://github.com/csmather" target="_blank" rel="noopener">More on GitHub ↗</a></p>
+
+</div>

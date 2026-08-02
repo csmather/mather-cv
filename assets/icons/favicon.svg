@@ -1,4 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#151a23"/>
-  <path d="M20 46L32 18l12 28h-4l-2.8-7h-10.4L24 46h-4z" fill="#2ec4b6"/>
+  <style>
+    .tile{fill:#fcfcfa;stroke:#1d2126}
+    .mark{fill:#1d2126}
+    @media (prefers-color-scheme: dark){
+      .tile{fill:#15171b;stroke:#d9dee5}
+      .mark{fill:#d9dee5}
+    }
+  </style>
+  <rect class="tile" x="2" y="2" width="60" height="60" rx="4" stroke-width="4"/>
+  <text class="mark" x="32" y="45" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="38" font-weight="700">sm</text>
 </svg>

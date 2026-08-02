@@ -1,12 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <style>
-    .tile{fill:#fcfcfa;stroke:#1d2126}
-    .mark{fill:#1d2126}
-    @media (prefers-color-scheme: dark){
-      .tile{fill:#15171b;stroke:#d9dee5}
-      .mark{fill:#d9dee5}
-    }
-  </style>
-  <rect class="tile" x="2" y="2" width="60" height="60" rx="4" stroke-width="4"/>
-  <text class="mark" x="32" y="45" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="38" font-weight="700">sm</text>
+  <rect x="2" y="2" width="60" height="60" rx="4" fill="#15171b" stroke="#52c0b2" stroke-width="4"/>
+  <g transform="translate(10.52,41.32) scale(0.017578,-0.017578)">
+    <path fill="#d9dee5" d="M518 -20Q280 -20 139 10L171 269Q297 253 383 245Q469 237 518 237Q654 237 715 256Q776 274 776 315Q776 358 713 377L368 477Q262 508 208 572Q155 635 155 742Q155 1080 736 1080Q804 1080 878 1075Q951 1070 1033 1060L1004 809Q913 817 845 820Q777 823 730 823Q573 823 502 806Q432 788 432 748Q432 704 492 687L789 605Q926 568 994 498Q1061 427 1061 314Q1061 -20 518 -20ZM2039 0V718Q2039 828 1975 828Q1903 828 1903 709V0H1702V738Q1702 828 1638 828Q1562 828 1562 709V0H1295V1060H1538L1552 928H1576Q1598 1080 1737 1080Q1869 1080 1897 928H1921Q1930 999 1976 1040Q2023 1080 2099 1080Q2206 1080 2256 1021Q2305 962 2305 830V0Z"/>
+  </g>
 </svg>

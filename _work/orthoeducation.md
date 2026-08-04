@@ -1,11 +1,11 @@
 ---
-title: "OrthoEducation (Multisite)"
+title: "OrthoEducation"
 order: 2
 external_url: "https://orthoeducation.com"
 thumb: "assets/screenshots/orthoeducation.png"
 screenshot: "assets/screenshots/orthoeducation.png"
-tags: ["WordPress Multisite","RCA","Plugin Dev","Security"]
-summary: "Nine-subsite patient-education network. Backend crash diagnosis, deep phased cleanup, security fixes, custom plugin work."
+tags: ["WordPress Multisite","SQL","PHP","Pinecone"]
+summary: "Nine-subsite patient-education network. Diagnosed and cleaned a database so bloated that writes to it were being throttled. I also developed a custom multisite-wide search plugin."
 ---
 
 ## [See Case Study](https://csmather.com/case-studies/site-ops/)

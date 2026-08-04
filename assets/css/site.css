@@ -152,7 +152,7 @@ td {
 }
 
 a.brand {
-  /* font-weight: 700; */
+  font-weight: 600;
   color: var(--ink)
 }
 
@@ -163,11 +163,13 @@ a.brand:hover {
 .site-nav {
   display: flex;
   flex-wrap: wrap;
+  font-family: "Cascadia Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .85rem;
   gap: 1.1rem
 }
 
 .site-nav a {
-  color: var(--muted)
+  color: var(--accent)
 }
 
 .site-nav a:hover {

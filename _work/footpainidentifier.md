@@ -4,8 +4,8 @@ order: 4
 external_url: "https://footpainidentifier.com"
 thumb: "assets/screenshots/footpainidentifier.png"
 screenshot: "assets/screenshots/footpainidentifier.png"
-tags: ["Laravel","RCA","Server Ops","Security"]
-summary: "Laravel diagnostic survey app. Root cause analysis, crash rescue, security hardening."
+tags: ["Laravel","PHP","Cloudflare","DigitalOcean","Security"]
+summary: "Laravel diagnostic survey app. Crashed regularly; found the root cause, fixed it, and dramatically hardened security in the process. Custom fail2ban for the network, layered anti-spam measures for the contact form."
 ---
 
 ## [See Case Study](https://csmather.com/case-studies/site-ops/)

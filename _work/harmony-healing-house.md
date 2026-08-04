@@ -4,8 +4,8 @@ order: 7
 external_url: "https://harmonyhealinghouse.com"
 thumb: "assets/screenshots/hhh.png"
 screenshot: "assets/screenshots/hhh.png"
-tags: ["Design", "Content Ops", "Admin"]
-summary: "Health & wellness site. Content updates, design, admin."
+tags: ["WordPress","Redesign","Divi","Consulting"]
+summary: "Health and wellness organization. Built out a large directory structure for regional resources and modernized the rest of the site."
 ---
 
 ## My role & impact

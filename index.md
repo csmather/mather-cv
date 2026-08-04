@@ -1,5 +1,5 @@
 ---
 layout: home
-title: "Scott Mather — Portfolio"
+title: "Scott Mather"
 ---
 

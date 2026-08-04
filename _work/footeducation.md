@@ -4,8 +4,8 @@ order: 1
 external_url: "https://footeducation.com"
 thumb: "assets/screenshots/footeducation.png"
 screenshot: "assets/screenshots/footeducation.png"
-tags: ["WordPress","Security","Server Ops","SEO"]
-summary: "Encyclopedic patient-education site. Security remediation, server ops, performance, SEO."
+tags: ["WordPress","Apache","PHP","AWS","DigitalOcean"]
+summary: "Encyclopedic patient-education site. Fixed server silently passing its own firewall, 449 to 0 audit errors, search clicks up 114%."
 ---
 
 ## [See Case Study](https://csmather.com/case-studies/site-ops/)

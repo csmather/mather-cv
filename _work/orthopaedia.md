@@ -4,8 +4,8 @@ order: 3
 external_url: "https://orthopaedia.com"
 thumb: "assets/screenshots/orthopaedia.png"
 screenshot: "assets/screenshots/orthopaedia.png"
-tags: ["WordPress","Migration","Custom Tooling","PHP"]
-summary: "Peer-reviewed online orthopedic textbook. Full content migration between different page builders via custom WP-CLI tooling."
+tags: ["WordPress","Content Migration","WP-CLI","PHP"]
+summary: "Peer-reviewed online orthopedic textbook. Moved 266 pages between different page builder plugins with a tool I built just for the job, plus verification scripts."
 ---
 
 ## My role & impact

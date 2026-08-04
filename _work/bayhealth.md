@@ -4,8 +4,8 @@ order: 6
 external_url: "https://bayhealthllc.com"
 thumb: "assets/screenshots/bayhealth.png"
 screenshot: "assets/screenshots/bayhealth.png"
-tags: ["Design", "Migration", "Maintenance"]
-summary: "Healthcare joint venture site. Migration, consulting, full site rebuild, maintenance."
+tags: ["WordPress","Migration","Divi","Consulting"]
+summary: "Healthcare joint venture site. Audited for breakpoints and helped migrate hosts with no major downtime. Fully rebuilt the previous ACF structure in Divi to making editing more accessible."
 ---
 
 ## My role & impact

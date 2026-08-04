@@ -4,9 +4,11 @@ order: 2
 external_url: "https://orthoeducation.com"
 thumb: "assets/screenshots/orthoeducation.png"
 screenshot: "assets/screenshots/orthoeducation.png"
-tags: ["WordPress Multisite","Cleanup","Plugin Dev","Security"]
-summary: "Nine-subsite patient-education network. Deep phased cleanup, security fixes, custom plugin work."
+tags: ["WordPress Multisite","RCA","Plugin Dev","Security"]
+summary: "Nine-subsite patient-education network. Backend crash diagnosis, deep phased cleanup, security fixes, custom plugin work."
 ---
+
+## [See Case Study](https://csmather.com/case-studies/site-ops/)
 
 ## My role & impact
 - Led a phased cleanup of a nine-subsite WordPress multisite network: database reduced from **2.1 GB to 166 MB**, total files from **5.5 GB to 2.8 GB**, active plugins from **37 to 19** — verified between phases with an automated visual smoke test so nothing editor-facing broke.

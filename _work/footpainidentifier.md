@@ -4,9 +4,11 @@ order: 4
 external_url: "https://footpainidentifier.com"
 thumb: "assets/screenshots/footpainidentifier.png"
 screenshot: "assets/screenshots/footpainidentifier.png"
-tags: ["Laravel","Server Ops","Security","Hardening"]
-summary: "Laravel diagnostic survey app. Crash rescue, security hardening, ops cleanup."
+tags: ["Laravel","RCA","Server Ops","Security"]
+summary: "Laravel diagnostic survey app. Root cause analysis, crash rescue, security hardening."
 ---
+
+## [See Case Study](https://csmather.com/case-studies/site-ops/)
 
 ## My role & impact
 - Rescued a regularly crashing Laravel diagnostic app serving **10,000+ patient survey responses**: root-caused MySQL dying from memory exhaustion on an undersized server and stabilized it for good.

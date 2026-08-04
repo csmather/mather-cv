@@ -4,25 +4,25 @@ title: "Case Study: Rescuing a Medical Education Network"
 permalink: /case-studies/site-ops/
 ---
 
-**The short version:** I took over three neglected medical education properties from a departed development vendor: a high-traffic WordPress site ([FootEducation](https://footeducation.com)), a nine-subsite WordPress multisite network ([OrthoEducation](https://orthoeducation.com)), and a Laravel diagnostic survey app ([FootPainIdentifier](https://footpainidentifier.com)). Working solo over about six months of part-time sessions, I removed the vendor's leftover access and pirated software, cut the bloat roughly in half, ended recurring crashes, and built out security, backups, and monitoring from scratch. Nothing editor-facing broke at any point, and search performance climbed steeply on both WordPress properties.
+## TL;DR
+I took over three neglected medical education properties from a departed development vendor: a high-traffic WordPress site ([FootEducation](https://footeducation.com)), a recently migrated nine-subsite WordPress multisite network ([OrthoEducation](https://orthoeducation.com)), and a separate Laravel diagnostic survey app ([FootPainIdentifier](https://footpainidentifier.com)). Working solo over about 2 months of part-time sessions, I removed the vendor's leftover access and pirated software, cut the bloat roughly in half, ended recurring crashes, and built out security, backups, and monitoring from scratch. Nothing editor-facing broke at any point, and search performance climbed steeply on both WordPress properties.
 
-The owner is a physician, not a technologist. Every change below also had to be explained in plain language, gated on his approval when it was significant, and invisible to him when it wasn't.
+The owner is a medical expert, not a technologist. **Every change below also had to be explained in plain language, gated on his approval when it was significant, and invisible to him when it wasn't.**
 
 ## How I work
 
 The same method ran through all three projects:
 
-- **Map everything first.** Each server has a living "server map" document: full plugin inventory, Apache config, DNS state, cron jobs, user accounts, known debt. Every work session updates it, and every session gets logged. Months later I can tell you exactly what changed, when, and why.
-- **Never trust inherited state.** Verify what is actually running instead of what the previous team said was running. That instinct is what surfaced most of the findings below.
-- **Prove it's orphaned before deleting it.** Before any plugin, table, or file was removed, I checked for live references: shortcodes in post content, widget areas, option rows, template usage. Cleanup at this scale is only safe when deletion is boring.
-- **Small, reversible phases.** Snapshot before each phase, verify after it. On the multisite cleanup, an automated visual smoke test re-screenshotted 27 key pages across the network after every phase so any breakage would show up immediately, before the owner ever saw it.
-- **One backup story, off-site.** All three properties now push nightly database backups to off-server object storage with 30-day retention, replacing a mix of broken, local-only, and nonexistent backup schemes.
+- **Map everything first:** I give each server a living "server map" document: a full inventory of plugins, Apache config, DNS, cron jobs, user accounts, known issues, etc. Every work session updates it to reflect the *current state of the site*, and every session gets recorded in a separate log chronologically. Months later I can tell you exactly what changed, when, and why.
+- **Be critical of the inherited state:** Verify what's actually running instead of what the previous team said was running. That instinct is what surfaced most of the findings below.
+- **Prove it's orphaned before deleting it:** Before any plugin, table, or file was removed, I checked for live references: shortcodes in post content, widget areas, option rows, template usage. Cleanup at this scale is only safe when deletion is verifiably inconsequential.
+- **Small, reversible phases:** Snapshot before each phase, verify after it. On the multisite cleanup, an automated visual smoke test re-screenshotted 27 key pages across the network after every phase so any breakage would show up immediately.
 
 ## FootEducation: security remediation and stabilization
 
 An encyclopedic patient-education site on its own VPS, behind a CDN firewall the server had been silently bypassing.
 
-- Found the site running a **pirated copy of a commercial page builder**: license checks patched out, a fake license re-injected on every page load, and live code fetches from a piracy domain with SSL verification disabled. Replaced it with a legitimate license and neutralized the injected code.
+- Found the site running a **pirated copy of a commercial page builder**, diagnosed from the code of the plugin itself: license checks patched out, a fake license re-injected on every page load, and live code fetches from a piracy domain with SSL verification disabled. Replaced it with a legitimate license and neutralized the injected code.
 - Removed the former vendor entirely: SSH keys, a shared Linux account, and WordPress admin accounts, with all content reassigned. Formal access revocation was coordinated with the owner and confirmed in writing.
 - Killed a **wildcard DNS record that had spam subdomains resolving against the site**, which had left 197 phantom pages in Google's index, then rebuilt the redirect architecture in clean layers (Apache for canonicalization, SEO plugin for 107 content redirects).
 - Ended a pattern of recurring crashes by root-causing it: PHP memory exhaustion during plugin updates while a bot burst hit a cold cache. Retuned Apache workers and PHP memory so worst-case usage is bounded by the RAM actually on the box.
@@ -69,8 +69,10 @@ A Laravel survey app holding 10,000+ patient responses, crashing regularly on a 
 | Pages visually verified per cleanup phase | 27 |
 | Editor-facing breakage across all of it | 0 |
 
+All three properties now push nightly database backups to off-server object storage with 30-day retention, replacing a mix of broken, local-only, and nonexistent backup schemes.
+
 ## The part clients never see
 
-All of this ran on documentation: per-server maps, chronological session logs, phased cleanup plans, and plain-language owner updates that translated database table counts into "almost half our used storage was bloat." That documentation is why a solo operator could hold three servers' worth of state in order, and it's the working style I bring to everything on this site, client work and personal projects alike.
+All of this ran on documentation: per-server maps, chronological session logs, phased cleanup plans, and plain-language owner updates that translated the technical stuff to be easier to digest. That documentation is why I as a solo operator could hold three servers' worth of state in order, and it's the working style I bring to everything on this site, client work, and personal projects alike.
 
 The tooling this work produced, including the migration CLI and the visual smoke-test runner, is described in [Ops & Tooling](/#tooling).

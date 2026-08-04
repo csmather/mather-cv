@@ -1,11 +1,11 @@
 ---
 title: "OrthoPaedia"
 order: 3
-external_url: "https://www.orthopaedia.com"
+external_url: "https://orthopaedia.com"
 thumb: "assets/screenshots/orthopaedia.png"
 screenshot: "assets/screenshots/orthopaedia.png"
-tags: ["WordPress","Migration","WP-CLI","Gutenberg"]
-summary: "Peer-reviewed orthopedic textbook online. Full Elementor-to-Gutenberg migration via custom WP-CLI tooling."
+tags: ["WordPress","Migration","Custom Tooling","PHP"]
+summary: "Peer-reviewed online orthopedic textbook. Full content migration between different page builders via custom WP-CLI tooling."
 ---
 
 ## My role & impact

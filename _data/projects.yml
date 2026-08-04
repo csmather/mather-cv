@@ -1,7 +1,7 @@
 - title: "Multisite HTML Sitemap & Network Search"
   description: "WordPress mu-plugin providing an auto-updating network-wide HTML sitemap and cross-site search. Running in production across a nine-subsite multisite network."
   github_url: "https://github.com/csmather/multisite-html-sitemap"
-  tags: ["WordPress", "PHP", "Multisite"]
+  tags: ["PHP", "Wordpress", "Multisite"]
 
 - title: "Elementor → Gutenberg Migrator"
   description: "WP-CLI tool that migrates pages off Elementor to native Gutenberg blocks: extracts real content from the builder's data layer, keeps per-page backups, and verifies integrity on write-back. Migrated a 266-page medical textbook with zero failures."

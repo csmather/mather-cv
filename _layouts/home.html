@@ -4,14 +4,14 @@ layout: default
 <div class="wrap home">
 
   <h1>Scott Mather</h1>
-  <p class="lede">Oakland-based website admin/developer focused on security, performance, SEO, and hands-on WordPress and server ops, and always building tools of my own along the way.</p>
-  <p class="contact"><a href="mailto:matherscottc@gmail.com">matherscottc@gmail.com</a> &middot; <a href="{{ '/assets/resume/Scott_Mather_Resume.pdf' | relative_url }}">resume</a> &middot; Oakland, CA</p>
+  <p class="lede">Web Developer</p>
+  <p class="bio">I'm a solo freelancer making websites faster, safer, and easier to maintain.</p>
+  <p class="bio">I studied cognitive science and still read in that direction, with interests in computational social science, linguistics, machine learning, and data science.</p>
+  <p class="contact"><a href="mailto:matherscottc@gmail.com">email</a> &middot; <a href="{{ '/assets/resume/Scott_Mather_Resume.pdf' | relative_url }}">resume</a> &middot; <a href="https://github.com/csmather" target="_blank" rel="noopener">github</a></p>
 
   <h2 id="case-study">Case Study</h2>
-  <p>
-    <strong><a href="{{ '/case-studies/site-ops/' | relative_url }}">How I Work: Rescuing a Medical Education Network</a></strong><br>
-    Three neglected properties, one departed vendor, six months of solo remediation: pirated software replaced, 197 phantom pages killed at DNS, a 2.1&nbsp;GB database cut to 166&nbsp;MB, and zero editor-facing breakage.
-  </p>
+    <h3><a href="{{ '/case-studies/site-ops/' | relative_url }}">How I Work: Rescuing a Medical Education Network</a></h3>
+    <p>Complete frontend and backend revitalization of three non-profit properties neglected by a previous vendor. I dug up pirated software, solved the crashes, cleared hundreds of phantom pages that hurt SEO, and pruned bloated databases, all with next to no downtime.</p>
 
   <h2 id="work">Selected Work</h2>
   {% assign items = site.work | where_exp: 'item', 'item.hidden != true' | sort: 'order' %}
@@ -24,7 +24,7 @@ layout: default
   {% endfor %}
 
   <h2 id="tooling">Ops &amp; Tooling</h2>
-  <p class="muted section-intro">Tools custom-built for the sites above.</p>
+  <p class="muted section-intro">Tools custom-built for the sites above to solve specific problems or optimize the workflow</p>
   {% for project in site.data.projects %}
   <article class="entry">
     <h3>{{ project.title }}</h3>
@@ -34,7 +34,7 @@ layout: default
   {% endfor %}
 
   <h2 id="projects">Personal Projects</h2>
-  <p class="muted section-intro">Fully self-taught projects I've created to explore Music Recommender Systems &amp; Information Retrieval, quality of life, specific tooling, and just for fun.</p>
+  <p class="muted section-intro">Fully self-taught projects that I work on in my free time to explore Music Recommender Systems &amp; Information Retrieval, quality of life, specific tooling, and just for fun</p>
   {% assign pitems = site.projects | sort: 'order' %}
   {% for item in pitems %}
   <article class="entry">

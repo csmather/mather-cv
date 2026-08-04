@@ -8,6 +8,8 @@ tags: ["WordPress","Security","Server Ops","SEO"]
 summary: "Encyclopedic patient-education site. Security remediation, server ops, performance, SEO."
 ---
 
+## [See Case Study](https://csmather.com/case-studies/site-ops/)
+
 ## My role & impact
 - Stabilized and grew organic search traffic on this legacy medical education site, driving a **114% increase in Google Search clicks** (impressions up 94%) following security, performance, and indexing fixes.
 - Remediated a badly inherited server: replaced unlicensed plugin copies with legitimate licenses, removed leftover developer SSH keys and admin accounts, fixed world-readable permissions, and locked the origin down to the Sucuri firewall it had been silently bypassing.

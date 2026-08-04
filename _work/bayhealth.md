@@ -4,8 +4,8 @@ order: 6
 external_url: "https://bayhealthllc.com"
 thumb: "assets/screenshots/bayhealth.png"
 screenshot: "assets/screenshots/bayhealth.png"
-tags: ["Design", "Hosting", "Maintenance"]
-summary: "Healthcare joint venture site. Hosting/structure help, maintenance, Wordpress rebuild."
+tags: ["Design", "Migration", "Maintenance"]
+summary: "Healthcare joint venture site. Migration, consulting, full site rebuild, maintenance."
 ---
 
 ## My role & impact

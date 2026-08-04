@@ -7,7 +7,7 @@ permalink: /case-studies/site-ops/
 ## TL;DR
 I took over three neglected medical education properties from a departed development vendor: a high-traffic WordPress site ([FootEducation](https://footeducation.com)), a recently migrated nine-subsite WordPress multisite network ([OrthoEducation](https://orthoeducation.com)), and a separate Laravel diagnostic survey app ([FootPainIdentifier](https://footpainidentifier.com)). Working solo over about 2 months of part-time sessions, I removed the vendor's leftover access and pirated software, cut the bloat roughly in half, ended recurring crashes, and built out security, backups, and monitoring from scratch. Nothing editor-facing broke at any point, and search performance climbed steeply on both WordPress properties.
 
-The owner is a medical expert, not a technologist. **Every change below also had to be explained in plain language, gated on his approval when it was significant, and invisible to him when it wasn't.**
+The owner is a medical expert, not a tech expert. **Every change below also had to be explained in plain language, gated on their approval when it was significant, and invisible when it wasn't.**
 
 ## How I work
 

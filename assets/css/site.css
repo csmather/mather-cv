@@ -227,20 +227,12 @@ a.brand:hover {
   scroll-margin-top: 2rem;
 }
 
-/* @media (prefers-reduced-motion: no-preference) { */
-/*   html { */
-/*     scroll-behavior: smooth; */
-/*   } */
-/* } */
+/* Table of contents */
 
-/* Table of contents
-   Mobile-first: a collapsible hairline drawer above the content. The sticky
-   left rail only kicks in at >=76rem, where there's margin room for it. */
+/** Mobile drawer version fallback **/
 .toc {
   margin: -1.9rem 0 1.6rem;
-  /* tucks the drawer up under the site header */
   border-bottom: 1px solid var(--border);
-  /* the site header supplies the top rule */
   font-family: var(--mono);
   font-size: 0.8rem;
   line-height: 1.5;
@@ -292,13 +284,12 @@ a.brand:hover {
   color: var(--ink);
 }
 
-/* Children only exist while their section is the active one. Never in the
-   drawer — sections alone keep it short enough to tap through. */
 .toc-children {
   display: none;
   flex-direction: column;
 }
 
+/** Fullwidth version if able **/
 @media (min-width: 76rem) {
   .layout {
     display: flex;
@@ -313,8 +304,6 @@ a.brand:hover {
     /* stops long URLs blowing out the column */
   }
 
-  /* Hangs in the left margin: the negative margin cancels its own width plus
-     the gap, so the content column stays 44rem and aligned with the header. */
   .toc {
     flex: 0 0 11rem;
     margin: 0 0 0 -14.5rem;
@@ -344,8 +333,7 @@ a.brand:hover {
     letter-spacing: 0.04em;
   }
 
-  /* The rail: one border on the nav, and each link overlaps it by -1px so the
-     active link's own border paints over it in the accent color. */
+  /* Nav rail */
   .toc nav {
     border-left: 1px solid var(--border);
     padding-bottom: 0;

@@ -1,48 +1,59 @@
 ---
 layout: default
 ---
+
 <div class="wrap home">
 
-  <h1>Scott Mather</h1>
-  <p class="lede">Web Admin &amp; Developer</p>
-  <p class="bio">I'm a solo freelancer making websites faster, safer, and easier to maintain.</p>
-  <p class="bio">I studied cognitive science and still read in that direction, with interests in computational social science, linguistics, machine learning, and data science.</p>
-  <p class="contact"><a href="mailto:matherscottc@gmail.com">contact</a> &middot; <a href="{{ '/assets/resume/Scott_Mather_Resume.pdf' | relative_url }}">resume</a> &middot; <a href="https://github.com/csmather" target="_blank" rel="noopener">github</a></p>
+  <div id="intro">
+    <h1>Scott Mather</h1>
+    <p class="lede">Web Admin &amp; Developer</p>
+    <p class="bio">I'm a solo freelancer making websites faster, safer, and easier to maintain.</p>
+    <p class="bio">I studied cognitive science and still read in that direction, with interests in computational social science, linguistics, machine learning, and data science.</p>
+    <p class="contact"><a href="mailto:matherscottc@gmail.com">contact</a> &middot; <a href="{{ '/assets/resume/Scott_Mather_Resume.pdf' | relative_url }}">resume</a> &middot; <a href="https://github.com/csmather" target="_blank" rel="noopener">github</a></p>
+  </div>
 
-  <h2 id="case-study">Case Study</h2>
+  <div id="case-study">
+    <h2>Case Study</h2>
     <h3><a href="{{ '/case-studies/site-ops/' | relative_url }}">Rescuing a Medical Education Network</a></h3>
     <p>Complete frontend and backend overhaul of three non-profit properties neglected by a previous vendor. I dug up pirated software, solved the crashes, cleared hundreds of phantom pages that hurt SEO, and pruned bloated databases, all with next to no downtime.</p>
+  </div>
 
-  <h2 id="work">Selected Work</h2>
-  {% assign items = site.work | where_exp: 'item', 'item.hidden != true' | sort: 'order' %}
-  {% for item in items %}
-  <article class="entry">
-    <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-    <p class="tags">{{ item.tags | join: ' · ' }}{% if item.external_url %} · <a href="{{ item.external_url }}" target="_blank" rel="noopener">{{ item.external_url | replace: 'https://', '' | replace: 'http://', '' }} ↗</a>{% endif %}</p>
-    <p>{{ item.summary }}</p>
-  </article>
-  {% endfor %}
+  <div id="work">
+    <h2 id="work">Selected Work</h2>
+    {% assign items = site.work | where_exp: 'item', 'item.hidden != true' | sort: 'order' %}
+    {% for item in items %}
+      <article class="entry">
+        <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+        <p class="tags">{{ item.tags | join: ' · ' }}{% if item.external_url %} · <a href="{{ item.external_url }}" target="_blank" rel="noopener">{{ item.external_url | replace: 'https://', '' | replace: 'http://', '' }} ↗</a>{% endif %}</p>
+        <p>{{ item.summary }}</p>
+      </article>
+    {% endfor %}
+  </div>
 
-  <h2 id="tooling">Ops &amp; Tooling</h2>
-  <p class="muted section-intro">Tools custom-built for the sites above to solve specific problems or optimize the workflow</p>
-  {% for project in site.data.projects %}
-  <article class="entry">
-    <h3>{{ project.title }}</h3>
-    <p class="tags">{{ project.tags | join: ' · ' }}{% if project.github_url %} · <a href="{{ project.github_url }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}</p>
-    <p>{{ project.description }}</p>
-  </article>
-  {% endfor %}
+  <div id="tooling">
+    <h2 id="tooling">Ops &amp; Tooling</h2>
+    <p class="muted section-intro">Tools custom-built for the sites above to solve specific problems or optimize the workflow</p>
+    {% for project in site.data.projects %}
+      <article class="entry">
+        <h3>{{ project.title }}</h3>
+        <p class="tags">{{ project.tags | join: ' · ' }}{% if project.github_url %} · <a href="{{ project.github_url }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}</p>
+        <p>{{ project.description }}</p>
+      </article>
+    {% endfor %}
+  </div>
 
-  <h2 id="projects">Personal Projects</h2>
-  <p class="muted section-intro">Fully self-taught projects that I work on in my free time to explore Music Recommender Systems &amp; Information Retrieval, quality of life, specific tooling, and just for fun</p>
-  {% assign pitems = site.projects | sort: 'order' %}
-  {% for item in pitems %}
-  <article class="entry">
-    <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-    <p class="tags">{{ item.tags | join: ' · ' }}{% if item.github_url %} · <a href="{{ item.github_url }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}{% if item.external_url %} · <a href="{{ item.external_url }}" target="_blank" rel="noopener">try it ↗</a>{% endif %}</p>
-    <p>{{ item.summary }}</p>
-  </article>
-  {% endfor %}
-  <p class="meta"><a href="https://github.com/csmather" target="_blank" rel="noopener">More on GitHub ↗</a></p>
+  <div id="projects">
+    <h2 id="projects">Personal Projects</h2>
+    <p class="muted section-intro">Fully self-taught projects that I work on in my free time to explore Music Recommender Systems &amp; Information Retrieval, quality of life, specific tooling, and just for fun</p>
+    {% assign pitems = site.projects | sort: 'order' %}
+    {% for item in pitems %}
+      <article class="entry">
+        <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+        <p class="tags">{{ item.tags | join: ' · ' }}{% if item.github_url %} · <a href="{{ item.github_url }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}{% if item.external_url %} · <a href="{{ item.external_url }}" target="_blank" rel="noopener">try it ↗</a>{% endif %}</p>
+        <p>{{ item.summary }}</p>
+      </article>
+    {% endfor %}
+    <p class="meta"><a href="https://github.com/csmather" target="_blank" rel="noopener">More on GitHub ↗</a></p>
+  </div>
 
 </div>

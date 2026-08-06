@@ -4,7 +4,7 @@ order: 2
 external_url: "https://orthoeducation.com"
 thumb: "assets/screenshots/orthoeducation.png"
 screenshot: "assets/screenshots/orthoeducation.png"
-tags: ["WordPress Multisite","SQL","PHP","Pinecone"]
+tags: ["WordPress Multisite","MySQL","PHP","Pinecone"]
 summary: "Nine-subsite patient-education network. Diagnosed and cleaned a database so bloated that writes to it were being throttled. I also developed a custom multisite-wide search plugin."
 ---
 
@@ -17,3 +17,4 @@ summary: "Nine-subsite patient-education network. Diagnosed and cleaned a databa
 - Wrote a custom mu-plugin providing a network-wide HTML sitemap and cross-site search covering all subsites plus the client's sister site — running in production across the network.
 - Configured SMTP, security headers, malware scanning, and nightly off-server backups across all nine subsites.
 - Drove a **33x increase** in Google Search impressions over a one-year period as consolidation and indexing stabilized.
+- Set up Pinecone knowledge base for AI chat assistant utilizing information from across the entire multisite plus FootEducation

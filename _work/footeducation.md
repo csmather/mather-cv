@@ -4,7 +4,7 @@ order: 1
 external_url: "https://footeducation.com"
 thumb: "assets/screenshots/footeducation.png"
 screenshot: "assets/screenshots/footeducation.png"
-tags: ["WordPress","Apache","PHP","AWS","DigitalOcean"]
+tags: ["WordPress","Apache","MySQL","AWS","DigitalOcean"]
 summary: "Encyclopedic patient-education site. Fixed server silently passing its own firewall, 449 to 0 audit errors, search clicks up 114%."
 ---
 

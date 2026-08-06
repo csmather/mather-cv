@@ -4,7 +4,7 @@ order: 5
 external_url: "https://cancersupportsonoma.org"
 thumb: "assets/screenshots/cancersupportsonoma.png"
 screenshot: "assets/screenshots/cancersupportsonoma.png"
-tags: ["Wix","Redesign","UX","Maintenance"]
+tags: ["Wix","Redesign","UX","Consulting"]
 summary: "Volunteer work for nonprofit cancer-wellness org. Full site redesign restructured around how clients actually navigate their services. Still donating time to maintenance."
 ---
 

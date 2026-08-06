@@ -1,13 +1,17 @@
 ---
 layout: default
 ---
+
 <div class="wrap page">
   <h1>{{ page.title }}</h1>
   {% if page.external_url %}
-  <p class="meta page-meta"><a href="{{ page.external_url }}" target="_blank" rel="noopener">{{ page.external_url | replace: 'https://', '' | replace: 'http://', '' }} ↗</a></p>
+    <p class="meta page-meta"><a href="{{ page.external_url }}" target="_blank" rel="noopener">{{ page.external_url | replace: 'https://', '' | replace: 'http://', '' }} ↗</a></p>
   {% endif %}
+  <p class="tags">{{ page.tags | join: ' · ' }}</p>
   {% if page.screenshot %}
-  <img class="shot" src="{{ page.screenshot | relative_url }}" alt="{{ page.title }} screenshot">
+    <img class="shot"
+         src="{{ page.screenshot | relative_url }}"
+         alt="{{ page.title }} screenshot">
   {% endif %}
   {{ content }}
 </div>

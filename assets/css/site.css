@@ -49,6 +49,7 @@ img {
   max-width: 44rem;
   margin: 0 auto;
   padding: 0 1rem;
+  text-wrap: pretty;
 }
 
 .skip {
@@ -187,10 +188,6 @@ a.brand:hover {
 .lede {
   font-family: var(--mono);
   color: var(--muted);
-}
-
-.bio {
-  text-wrap: pretty;
 }
 
 .contact {

@@ -48,15 +48,15 @@ layout: default
     <section id="intro">
       <h1>Scott Mather</h1>
       <p class="lede">Web Admin &amp; Developer</p>
-      <p>I'm a solo freelancer making websites faster, safer, and easier to maintain.</p>
-      <p>I studied cognitive science and still read in that direction, with interests in computational social science, linguistics, machine learning, and data science.</p>
+      <p>Hi! I'm a solo freelancer making websites faster, safer, and easier to maintain.</p>
+      <p>Aside from websites, I'm interested in computational social science, linguistics, machine learning, and data science. With my background in cognitive science, I like to approach problems by drawing from different areas. Here you'll find the range of work I've done!</p>
       <p class="contact"><a href="mailto:matherscottc@gmail.com">contact</a> &middot; <a href="{{ '/assets/resume/Scott_Mather_Resume.pdf' | relative_url }}">resume</a> &middot; <a href="https://github.com/csmather" target="_blank" rel="noopener">github</a></p>
     </section>
 
     <section id="case-study">
       <h2>Case Study</h2>
       <h3><a href="{{ '/case-studies/site-ops/' | relative_url }}">Rescuing a Medical Education Network</a></h3>
-      <p>Complete frontend and backend overhaul of three non-profit properties neglected by a previous vendor. I dug up pirated software, solved the crashes, cleared hundreds of phantom pages that hurt SEO, and pruned bloated databases, all with next to no downtime.</p>
+      <p>I did a complete frontend and backend overhaul of three non-profit properties neglected by a previous vendor. I dug up pirated software, solved the crashes, and pruned bloated databases, all with next to no downtime on each website.</p>
     </section>
 
     <section id="work">
@@ -73,7 +73,7 @@ layout: default
 
     <section id="tooling">
       <h2>Ops &amp; Tooling</h2>
-      <p class="muted section-intro">Tools custom-built for the sites above to solve specific problems or optimize the workflow</p>
+      <p class="muted section-intro">These are tools that I custom-built for the sites above to solve specific problems or optimize the workflow. Currently, I'm working on generalizing them to be usable beyond the scenarios they were created for so that anyone can use them!</p>
       {% for tool in site.data.tools %}
         <article class="entry" id="{{ tool.title | slugify }}">
           <h3>{{ tool.title }}</h3>
@@ -85,7 +85,7 @@ layout: default
 
     <section id="projects">
       <h2>Personal Projects</h2>
-      <p class="muted section-intro">Self-taught projects that I work on in my free time to explore music recommender systems, quality of life, specific tooling, and just for fun</p>
+      <p class="muted section-intro">Here are some of my self-taught projects that I work on in my free time. Lately I've been exploring music recommender systems and data science, but sometimes they're for quality of life or just for fun.</p>
       {% assign pitems = site.projects | sort: 'order' %}
       {% for item in pitems %}
         <article class="entry" id="{{ item.slug }}">

@@ -2,6 +2,7 @@
 title: "NTS Artist Map"
 order: 2
 github_url: "https://github.com/csmather/nts-artist-map"
+external_url: "https://csmather.github.io/nts-artist-map/"
 tags: ["Python", "Data Science", "Web Crawling", "Music"]
 summary: "Mines NTS Radio shows' curated tracklists instead of interviews like Basilect Engine. 86,600 episodes crawled, 1.5M artist strings canonicalized, 11M co-occurrence pairs ranked by curator diversity. Made a visualization network frontend to explore the results."
 ---

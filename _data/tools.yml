@@ -1,12 +1,12 @@
 - title: "Multisite HTML Sitemap & Network Search"
-  description: "WordPress mu-plugin providing an auto-updating network-wide HTML sitemap and cross-site search. Running in production across a nine-subsite multisite network."
+  description: "WordPress plugin that gives a multisite network one auto-updating sitemap page and one search box covering every site in the network. Running in production on a nine-site network."
   github_url: "https://github.com/csmather/multisite-html-sitemap"
   tags: ["PHP", "HTML", "CSS", "JavaScript", "WordPress Multisite"]
 
 - title: "Elementor → Gutenberg Migrator"
-  description: "WP-CLI tool that migrates pages off Elementor to native Gutenberg blocks: extracts real content from the builder's data layer, keeps per-page backups, and verifies integrity on write-back. Migrated a 266-page medical textbook with zero failures."
+  description: "Command-line tool that moves pages off the Elementor page builder and into WordPress's native editor. It pulls the real content out of Elementor's data, backs up each page, and checks its own work after every write. Migrated a 266-page medical textbook with zero failures."
   tags: ["PHP", "Bash", "WP-CLI", "WordPress"]
 
 - title: "Visual Smoke-Test Runner"
-  description: "Screenshot-based regression check used during multi-phase site cleanups: it snapshots key pages before and after each change so breakage shows up immediately. Verified 27 pages per pass across a multisite network."
+  description: "Screenshots a list of key pages before and after each change so anything that broke is visible right away. I ran it after every phase of the multisite cleanup, 27 pages per pass."
   tags: ["Playwright", "TypeScript", "PHP", "Bash"]

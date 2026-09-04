@@ -22,20 +22,20 @@ layout: default
       </div>
 
       <div class="toc-group">
-        <a href="#tooling">Ops &amp; Tooling</a>
-        <div class="toc-children">
-          {% for project in site.data.projects %}
-            <a href="#{{ project.title | slugify }}">{{ project.title }}</a>
-          {% endfor %}
-        </div>
-      </div>
-
-      <div class="toc-group">
         <a href="#projects">Personal Projects</a>
         <div class="toc-children">
           {% assign toc_projects = site.projects | sort: 'order' %}
           {% for item in toc_projects %}
             <a href="#{{ item.slug }}">{{ item.title }}</a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="toc-group">
+        <a href="#tooling">Ops &amp; Tooling</a>
+        <div class="toc-children">
+          {% for project in site.data.tools %}
+            <a href="#{{ project.title | slugify }}">{{ project.title }}</a>
           {% endfor %}
         </div>
       </div>
@@ -48,19 +48,20 @@ layout: default
     <section id="intro">
       <h1>Scott Mather</h1>
       <p class="lede">Web Admin &amp; Developer</p>
-      <p>Hi! I'm a solo freelancer making websites faster, safer, and easier to maintain.</p>
-      <p>Aside from websites, I'm interested in computational social science, linguistics, machine learning, and data science. With my background in cognitive science, I like to approach problems by drawing from different areas. Here you'll find the range of work I've done!</p>
+      <p>I'm a freelance web developer in Oakland. Most of my client work is inheriting websites, then making them fast, secure, and easy for the owner to edit without needing me.</p>
+      <p>On my own time I work on music data. It pulled me into machine learning, natural language processing, and recommender-systems research, and that's the direction I want to keep building toward. I studied cognitive science, which is probably why I keep chasing questions like "can you measure a vibe?"</p>
       <p class="contact"><a href="mailto:matherscottc@gmail.com">contact</a> &middot; <a href="{{ '/assets/resume/Scott_Mather_Resume.pdf' | relative_url }}">resume</a> &middot; <a href="https://github.com/csmather" target="_blank" rel="noopener">github</a></p>
     </section>
 
     <section id="case-study">
       <h2>Case Study</h2>
       <h3><a href="{{ '/case-studies/site-ops/' | relative_url }}">Rescuing a Medical Education Network</a></h3>
-      <p>I did a complete frontend and backend overhaul of three non-profit properties neglected by a previous vendor. I dug up pirated software, solved the crashes, and pruned bloated databases, all with next to no downtime on each website.</p>
+      <p>Three medical education sites and a lot of things that should not have been running. I found pirated software, ended the recurring crashes, cut the database bloat by more than half, and locked the servers down. The editors never noticed any of it happening, which was the point.</p>
     </section>
 
     <section id="work">
       <h2>Selected Work</h2>
+      <p class="muted section-intro">Client sites I've built, rebuilt, or repaired. The case study above covers three of them.</p>
       {% assign items = site.work | where_exp: 'item', 'item.hidden != true' | sort: 'order' %}
       {% for item in items %}
         <article class="entry" id="{{ item.slug }}">
@@ -71,21 +72,9 @@ layout: default
       {% endfor %}
     </section>
 
-    <section id="tooling">
-      <h2>Ops &amp; Tooling</h2>
-      <p class="muted section-intro">These are tools that I custom-built for the sites above to solve specific problems or optimize the workflow. Currently, I'm working on generalizing them to be usable beyond the scenarios they were created for so that anyone can use them!</p>
-      {% for tool in site.data.tools %}
-        <article class="entry" id="{{ tool.title | slugify }}">
-          <h3>{{ tool.title }}</h3>
-          <p class="tags">{{ tool.tags | join: ' · ' }}{% if tool.github_url %} · <a href="{{ tool.github_url }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}</p>
-          <p>{{ tool.description }}</p>
-        </article>
-      {% endfor %}
-    </section>
-
     <section id="projects">
       <h2>Personal Projects</h2>
-      <p class="muted section-intro">Here are some of my self-taught projects that I work on in my free time. Lately I've been exploring music recommender systems and data science, but sometimes they're for quality of life or just for fun.</p>
+      <p class="muted section-intro">Things I build on my own time. The first two involve music data and the rest are smaller: a linguistics joke, a fix for a daily annoyance, that kind of thing.</p>
       {% assign pitems = site.projects | sort: 'order' %}
       {% for item in pitems %}
         <article class="entry" id="{{ item.slug }}">
@@ -95,6 +84,18 @@ layout: default
         </article>
       {% endfor %}
       <p class="meta"><a href="https://github.com/csmather" target="_blank" rel="noopener">More on GitHub ↗</a></p>
+    </section>
+
+    <section id="tooling">
+      <h2>Ops &amp; Tooling</h2>
+      <p class="muted section-intro">Small tools I wrote for the client sites in Selected Work when nothing off the shelf did the job. I'm slowly cleaning them up so they work on other people's sites too.</p>
+      {% for tool in site.data.tools %}
+        <article class="entry" id="{{ tool.title | slugify }}">
+          <h3>{{ tool.title }}</h3>
+          <p class="tags">{{ tool.tags | join: ' · ' }}{% if tool.github_url %} · <a href="{{ tool.github_url }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}</p>
+          <p>{{ tool.description }}</p>
+        </article>
+      {% endfor %}
     </section>
 
   </div>

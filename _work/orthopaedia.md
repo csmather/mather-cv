@@ -5,12 +5,17 @@ external_url: "https://orthopaedia.com"
 thumb: "assets/screenshots/orthopaedia.png"
 screenshot: "assets/screenshots/orthopaedia.png"
 tags: ["WordPress","Content Migration","WP-CLI","PHP"]
-summary: "Peer-reviewed online orthopedic textbook. Moved 266 pages between different page builder plugins with a tool I built just for the job, plus verification scripts."
+summary: "Peer-reviewed online orthopedic textbook. Its physician editors couldn't change a page without going through a page-builder plugin, so I wrote a tool that moved all 266 pages to WordPress's native editor, and a second one that checked nothing got lost."
 ---
 
-## My role & impact
-- Migrated a **~266-page** peer-reviewed medical textbook off Elementor to native Gutenberg so its physician editors could edit content directly — **255 pages converted, zero failures**.
-- Built a custom WP-CLI migration tool that extracts each page's true content from Elementor's data layer, writes it back as native blocks, and detaches the builder — with per-page metadata backups, dry-run mode, and read-back integrity checks.
-- Wrote a separate parity verifier comparing every page before and after migration: **265 passed, 0 warnings**.
-- Rebuilt the homepage as a native page (converting icon-font dependencies to inline SVG) and unified figure/caption styling across three generations of content so newly added images inherit it automatically.
-- Cut over via staging-to-live deploy with Elementor fully deactivated sitewide; also freed **5.6 GB** of orphaned backup archives that had the hosting account at 99% capacity.
+A peer-reviewed orthopedic textbook, about 266 pages, all built in the Elementor page builder. The physician editors couldn't change anything without working through the builder, and the builder was in the way.
+
+## What I did
+- Wrote a WP-CLI tool that pulls each page's real content out of Elementor's data, writes it back as native WordPress blocks, and detaches the builder. It backs up every page first, has a dry-run mode, and reads each page back to confirm the write matched.
+- Wrote a second script that compares every page before and after migration: 265 passed, 0 warnings.
+- Converted 255 pages with zero failures.
+- Rebuilt the homepage as a native page, swapping icon fonts for inline SVG, and unified figure and caption styling across three generations of content so new images match automatically.
+- Deployed from staging to live with Elementor fully off sitewide. Also freed 5.6 GB of orphaned backup archives that had the hosting account at 99% capacity.
+
+## Result
+The editors write directly in WordPress now. The migration tool is listed under Ops & Tooling.

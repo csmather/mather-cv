@@ -5,12 +5,11 @@ external_url: "https://harmonyhealinghouse.com"
 thumb: "assets/screenshots/hhh.png"
 screenshot: "assets/screenshots/hhh.png"
 tags: ["WordPress","Redesign","Divi","Consulting"]
-summary: "Health and wellness organization. Built out a large directory structure for regional resources and modernized the rest of the site."
+summary: "Wellness organization in Sonoma Valley. I built and maintain the site, including a large directory of regional health resources that staff can keep adding to on their own."
 ---
 
-## My role & impact
-- Built and maintained the full Harmony Healing House website, managing design, content architecture, and ongoing technical improvements.
-- Expanded site features to support and promote book releases as well as community events.
-- Supported content strategy and brand identity for community outreach.
-- Served as the sole developer for the Health & Happiness Hub of Sonoma Valley, implementing a scalable CMS structure to maintain ongoing additions of regional resources, services, and programs.
-
+## What I did
+- Built the site and have maintained it since: design, content structure, and ongoing improvements.
+- Added features for promoting book releases and community events.
+- Sole developer for the Health & Happiness Hub of Sonoma Valley, a directory of regional resources, services, and programs. I structured it so staff can keep adding entries without touching code.
+- Helped with content and brand identity for community outreach.

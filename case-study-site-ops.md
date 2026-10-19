@@ -5,25 +5,25 @@ permalink: /case-studies/site-ops/
 ---
 
 ## The Gist
-I took over three neglected medical education properties from a departed development vendor: a high-traffic WordPress site ([FootEducation](https://footeducation.com)), a recently migrated nine-subsite WordPress multisite network ([OrthoEducation](https://orthoeducation.com)), and a separate Laravel diagnostic survey app ([FootPainIdentifier](https://footpainidentifier.com)). Working solo over about 2 months of part-time sessions, I removed the vendor's leftover access and pirated software, cut the bloat roughly in half, ended recurring crashes, and built out security, backups, and monitoring from scratch. Nothing editor-facing broke at any point, and search performance climbed steeply on both WordPress properties.
+I took over three neglected medical education properties for general site maintenance: a high-traffic but time-worn WordPress site ([FootEducation](https://footeducation.com)), a recently migrated nine-subsite WordPress Multisite network ([OrthoEducation](https://orthoeducation.com)), and a separate Laravel diagnostic survey app ([FootPainIdentifier](https://footpainidentifier.com)). Working solo over about 2 months of part-time sessions, I removed pirated software, cut the bloat in half, ended recurring crashes, and built out security, backups, and monitoring from scratch. Nothing editor-facing broke at any point, and search performance climbed steeply on both WordPress properties when it was finished.
 
-The owner is a medical expert, not a tech expert. **Every change below also had to be explained in plain language, gated on their approval when it was significant, and invisible when it wasn't.**
+The owner is a medical expert, not a tech expert. **Every change below also had to be explained in plain language**, gated on their approval when it was significant, and invisible when it wasn't.
 
 ## How I work
 
 The same method ran through all three projects:
 
-- **Map everything first:** I give each server a living "server map" document: a full inventory of plugins, Apache config, DNS, cron jobs, user accounts, known issues, etc. Every work session updates it to reflect the *current state of the site*, and every session gets recorded in a separate log chronologically. Months later I can tell you exactly what changed, when, and why.
-- **Be critical of the inherited state:** Verify what's actually running instead of what the previous team said was running. That instinct is what surfaced most of the findings below.
-- **Prove it's orphaned before deleting it:** Before any plugin, table, or file was removed, I checked for live references: shortcodes in post content, widget areas, option rows, template usage. Cleanup at this scale is only safe when deletion is verifiably inconsequential.
-- **Small, reversible phases:** Snapshot before each phase, verify after it. On the multisite cleanup, an automated visual smoke test re-screenshotted 27 key pages across the network after every phase so any breakage would show up immediately.
+- **Map everything first:** I give each server a living "server map" document: a full inventory of plugins, configurations, users, known issues, etc. Every work session updates it to reflect the *current state of the site*, and every session gets recorded in a separate log chronologically. Months later I can tell you exactly what changed when, plus the reasoning behind it.
+- **Be critical of the inherited state:** Verify what's actually running instead of what's assumed to be running. That instinct is what surfaced most of the findings below.
+- **Prove it's orphaned before deleting it:** Before anything is removed I check for live references. Cleanup at this scale is only safe when deletion is verifiably inconsequential.
+- **Small, reversible phases:** Snapshot before each phase, verify after it. On the multisite cleanup, I made an automated smoke test that verifies 27 key pages across the network so any breakage would show up immediately.
 
 ## FootEducation: security remediation and stabilization
 
 An encyclopedic patient-education site on its own VPS, behind a CDN firewall the server had been silently bypassing.
 
-- Found the site running a **pirated copy of a commercial page builder**, diagnosed from the code of the plugin itself: license checks patched out, a fake license re-injected on every page load, and live code fetches from a piracy domain with SSL verification disabled. Replaced it with a legitimate license and neutralized the injected code.
-- Removed the former vendor entirely: SSH keys, a shared Linux account, and WordPress admin accounts, with all content reassigned. Formal access revocation was coordinated with the owner and confirmed in writing.
+- Found the site running a **pirated copy of a commercial page builder**, diagnosed from the code of the plugin itself: its license checks were patched out with a fake license re-injected on every page load, and live code fetches from an unsecure piracy domain. I'm glad I caught it, since it explained a lot; something felt off about the page builder the whole time. After examining and removing the plugin, we replaced it with a legitimate license.
+- Removed the former vendor entirely: SSH keys, a shared Linux account, and WordPress admin accounts. I handled communication with them during this process.
 - Killed a **wildcard DNS record that had spam subdomains resolving against the site**, which had left 197 phantom pages in Google's index, then rebuilt the redirect architecture in clean layers (Apache for canonicalization, SEO plugin for 107 content redirects).
 - Ended a pattern of recurring crashes by root-causing it: PHP memory exhaustion during plugin updates while a bot burst hit a cold cache. Retuned Apache workers and PHP memory so worst-case usage is bounded by the RAM actually on the box.
 - Set up authenticated email (SPF, DKIM, DMARC), locked the origin server down to the firewall's IP ranges, and audited every remaining plugin.

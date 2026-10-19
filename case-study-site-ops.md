@@ -24,55 +24,51 @@ An encyclopedic patient-education site on its own VPS, behind a CDN firewall the
 
 - Found the site running a **pirated copy of a commercial page builder**, diagnosed from the code of the plugin itself: its license checks were patched out with a fake license re-injected on every page load, and live code fetches from an unsecure piracy domain. I'm glad I caught it, since it explained a lot; something felt off about the page builder the whole time. After examining and removing the plugin, we replaced it with a legitimate license.
 - Removed the former vendor entirely: SSH keys, a shared Linux account, and WordPress admin accounts. I handled communication with them during this process.
-- Killed a **wildcard DNS record that had spam subdomains resolving against the site**, which had left 197 phantom pages in Google's index, then rebuilt the redirect architecture in clean layers (Apache for canonicalization, SEO plugin for 107 content redirects).
-- Ended a pattern of recurring crashes by root-causing it: PHP memory exhaustion during plugin updates while a bot burst hit a cold cache. Retuned Apache workers and PHP memory so worst-case usage is bounded by the RAM actually on the box.
-- Set up authenticated email (SPF, DKIM, DMARC), locked the origin server down to the firewall's IP ranges, and audited every remaining plugin.
+- Removed a wildcard DNS record that let spam subdomains point at the site, which had left almost 200 fake pages with the same domain on Google. From there I rebuilt 107 content redirects from scratch.
+- Tracked down why the site kept crashing: it ran out of memory when updates and high traffic hit at the same time. I re-tuned the server so it can't use more resources than it actually has.
+- Set up proper email authentication (DNS), locked down the website's traffic with a firewall, and did a final audit of the entire server.
 
-**Result:** site audit errors went from 449 to 0, Google Search clicks rose 114% year over year, and the crash pattern stopped.
+**Result:** Semrush errors went from 449 to 0, Google Search clicks rose 114% year over year, and no more crashes.
 
 ## OrthoEducation: the nine-subsite cleanup
 
-The flagship's multisite sibling, cloned by the vendor and left to rot. Abandoned page builders, five backup plugins, and enough junk that the database had pushed the host into write throttling.
+A newer, more generalized network of orthopedic education material that the vendor created by cloning of a previous version of FootEducation. A lot of issues stemmed from their attempts to retrofit normal WordPress fixtures to a WordPress Multisite. It was full of abandoned page builders, five separate backup plugins, and enough junk that the database started getting throttled due to its size.
 
-- Ran a **five-phase cleanup over 19 sessions in six weeks**: database from 2.1 GB down to 166 MB, files from 5.5 GB to 2.8 GB, active plugins from 37 to 19, roughly 275 orphaned database tables dropped.
-- Every removal was audited first. One example: before deleting the abandoned page-builder stack, I confirmed zero of its shortcode tokens remained on any live page network-wide, then purged 1,611 leftover metadata rows behind it.
-- Reassigned **3,847 posts** away from the vendor's admin account with direct database updates, since the standard tooling doesn't support reassignment on multisite.
-- Closed a publicly readable error log that was leaking an email API key, added security headers network-wide, and brought the firewall plugin to the same tuned baseline as the flagship site.
-- Verified every phase with the 27-page visual smoke test. The owner's editors never noticed the cleanup happening. That was the point.
+- Cleaned it up in five phases, finding tons of unused bloat in the process: database down from 2.1 GB to 166 MB, server files from 5.5 GB to 2.8 GB, active plugins from 37 to 19.
+- Checked every removal first. For example, before deleting the old page builders, I confirmed no live page anywhere on the network still used them with a script.
+- Moved 3,847 posts off the vendor's admin account. The standard tools can't do that on a multisite, so I did it directly in the database.
+- Closed a public error log that was leaking an API key, added security across the network, and brought the firewall up to the same setup as FootEducation.
+- Ran the 27-page smoke test after every phase to confirm that nothing broke in the process. Backups were made often in case of breakage.
 
-**Result:** Google Search impressions up 33x over a year as consolidation and indexing stabilized, on infrastructure half the size.
+**Result:** Google Search impressions up 33x over a year on a site that now uses half the resources.
 
 ## FootPainIdentifier: rescuing a crashing app
 
-A Laravel survey app holding 10,000+ patient responses, crashing regularly on a 1 GB server with no firewall and the previous vendor's credentials scattered through it.
+A Laravel survey app holding 10,000+ patient responses. It crashed regularly, had no firewall, and still had the previous vendor's credentials all over it.
 
-- Root-caused the crashes to MySQL dying from memory exhaustion, then stabilized the box with swap, service tuning, and disk cleanup.
-- Purged the vendor's leftovers: cloud credentials in the root home directory, a git remote with embedded passwords, and a forgotten world-writable copy of the entire app using default database passwords.
-- Fixed a backup cron that had been firing **60 times a night** and replaced it with a sane daily job shipping off-site.
-- Wrote a **custom fail2ban jail that bans credential-scanning bots on their first probe** for paths like `/.env` and `/.git`. Validated against real logs: 870+ scanner hits in a single day, banned on contact. Layered contact-form defenses ended a spam flood without adding friction for patients.
-- Rotated dangerously weak database credentials and put log rotation on a 159 MB runaway log.
+- Found the database was crashing from running out of memory, then stabilized the server.
+- Cleaned out the vendor's leftovers: cloud credentials, passwords saved in plain text, and a forgotten, wide-open copy of the entire app.
+- Fixed a backup job that was running **60 times a night** and replaced it with one daily backup stored off the server.
+- Wrote a rule that bans bots the first time they go looking for passwords and config files. On one day I checked, it caught 870 of them, which was 870 more than normal. Also stopped email spam that was originating from the site's contact form.
+- Replaced weak passwords and pruned old log files that had grown out of control.
 
-**Result:** an EOL-framework app that used to fall over now runs quietly on a $6/month server, monitored and backed up.
+**Result:** an outdated app that used to fall over now runs quietly on a cheap server, monitored and backed up.
 
 ## By the numbers
 
 | Metric | Result |
 | --- | --- |
-| OrthoEducation database | 2.1 GB → 166 MB |
-| OrthoEducation files | 5.5 GB → 2.8 GB |
-| Active plugins (OE) | 37 → 19 |
-| Orphaned DB tables dropped | ~275 |
+| OrthoEducation database | −92% |
+| OrthoEducation files | −49% |
+| OrthoEducation active plugins | −49% |
 | FootEducation audit errors | 449 → 0 |
 | FootEducation search clicks | +114% YoY |
 | OrthoEducation search impressions | 33x over one year |
-| Scanner probes banned in one validated day | 870+ |
-| Pages visually verified per cleanup phase | 27 |
-| Editor-facing breakage across all of it | 0 |
 
-All three properties now push nightly database backups to off-server object storage with 30-day retention, replacing a mix of broken, local-only, and nonexistent backup schemes.
+All three sites now back up their databases every night to off-server storage, kept for 30 days. Before, backups were either broken, stored on the same server, or didn't exist.
 
 ## The part clients never see
 
-All of this ran on documentation: per-server maps, chronological session logs, phased cleanup plans, and plain-language owner updates that translated the technical stuff to be easier to digest. That documentation is why I as a solo operator could hold three servers' worth of state in order, and it's the working style I bring to everything on this site, client work, and personal projects alike.
+All of this ran on documentation: server maps, session logs, cleanup plans, and plain-language updates for the owner. That's how I kept three servers straight working solo, and it's how I work on everything - client work and personal projects alike.
 
-The tooling this work produced, including the migration CLI and the visual smoke-test runner, is described in [Ops & Tooling](/#tooling).
+The tools I built along the way are described in more detail in [Ops & Tooling](/#tooling).

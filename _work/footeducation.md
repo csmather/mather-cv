@@ -4,7 +4,7 @@ order: 1
 external_url: "https://footeducation.com"
 thumb: "assets/screenshots/footeducation.png"
 screenshot: "assets/screenshots/footeducation.png"
-tags: ["WordPress","Apache","MySQL","AWS","DigitalOcean"]
+tags: ["WordPress","Elementor","Apache","MySQL","AWS","DigitalOcean"]
 summary: "Patient-education site for foot and ankle conditions. I inherited it running pirated software behind a firewall it wasn't actually using. Cleaned it up, ended the crashes, and Google search clicks more than doubled the following year."
 ---
 

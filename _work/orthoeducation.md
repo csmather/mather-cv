@@ -4,8 +4,8 @@ order: 2
 external_url: "https://orthoeducation.com"
 thumb: "assets/screenshots/orthoeducation.png"
 screenshot: "assets/screenshots/orthoeducation.png"
-tags: ["WordPress Multisite","MySQL","PHP","Knowledge Base"]
-summary: "Nine orthopedic patient-education sites sharing one WordPress install. The database had grown so bloated the host was throttling it. I cut it to under a tenth of its size over six weeks without the editors noticing, and wrote a search plugin that covers the whole network."
+tags: ["WordPress Multisite","Elementor","MySQL","PHP","AI Knowledge Base"]
+summary: "Nine orthopedic patient-education sites sharing one WordPress install. The database had grown so bloated the host was throttling it. I also wrote a search plugin that covers the whole network and set up a knowledge base to be used by an AI chat assistant."
 ---
 
 ## [See Case Study](https://csmather.com/case-studies/site-ops/)

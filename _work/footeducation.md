@@ -10,17 +10,18 @@ summary: "Patient-education site for foot and ankle conditions. I inherited it r
 
 ## [See Case Study](https://csmather.com/case-studies/site-ops/)
 
-I inherited this long-running patient-education site from a vendor who had stopped answering. It crashed on a regular pattern, ran a pirated copy of a commercial page builder, and sat behind a paid firewall that it was quietly letting traffic bypass.
+I inherited this patient-education site to do general maintenance and found 10+ years worth of technical debt that had accumulated. It crashed on a regular pattern, ran a pirated copy of a commercial page builder, and sat behind a paid firewall that it was quietly letting traffic bypass.
 
 ## What I did
 - Replaced the pirated page builder with a real license and removed the code it had injected into every page load.
 - Removed the old vendor's access entirely: SSH keys, a shared Linux account, and WordPress admin accounts.
-- Locked the server down so traffic actually has to pass through the firewall, and fixed permissions that let anything on the server read anything.
-- Found why it kept crashing (PHP running out of memory during plugin updates while bots hit an empty cache) and tuned Apache and PHP so it can't happen again.
+- Locked the site down so traffic actually has to pass through the firewall, and tightened security within the server itself.
+- Found why it kept crashing (PHP running out of memory during plugin updates while bots hit an empty cache) and tuned its Apache and PHP configurations so it can't happen again.
 - Upgraded PHP from 8.0 to 8.3, cut active plugins from 33 to 25, and removed about 300 MB of dead code.
-- Merged two competing translation systems into one, covering 75 English/French page pairs. That alone took the site's audit errors from 449 to 0.
-- Set up email authentication (SPF, DKIM, DMARC) so the site's messages are verified as real, plus nightly off-server backups with 30 days of history.
+- Merged two competing translation systems into one, covering 75 English/French page pairs.
+- Set up nightly backups that get stored off-server with 30 days of history.
+- Set up email authentication for the domain as well as Cloudflare to stop email spam.
 - Moved the hosting from AWS to DigitalOcean to simplify the setup.
 
 ## Result
-The crashes stopped. Google search clicks rose 114% over the following year and impressions rose 94%.
+Before, the site was very sluggish, and traffic was decreasing steadily. Now, it's a noticeably smoother experience, the crashes stopped, Google search clicks rose by 114% over the following year, and impressions rose by 94%.

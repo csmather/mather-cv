@@ -32,7 +32,7 @@ layout: default
       </div>
 
       <div class="toc-group">
-        <a href="#tooling">Ops &amp; Tooling</a>
+        <a href="#tooling">Custom Tools</a>
         <div class="toc-children">
           {% for project in site.data.tools %}
             <a href="#{{ project.title | slugify }}">{{ project.title }}</a>
@@ -74,7 +74,7 @@ layout: default
 
     <section id="projects">
       <h2>Personal Projects</h2>
-      <p class="muted section-intro">Things I build on my own time. The first two involve music data and the rest are smaller: a linguistics joke, a fix for a daily annoyance, that kind of thing.</p>
+      <p class="muted section-intro">These are some of the projects that I do on my own time, which usually stem from the impulse to turn my ideas into something tangible. This can be related to music information, a linguistics joke, or a fix for an annoyance, but I try not to limit myself when I go down an educational rabbithole.</p>
       {% assign pitems = site.projects | sort: 'order' %}
       {% for item in pitems %}
         <article class="entry" id="{{ item.slug }}">
@@ -87,8 +87,8 @@ layout: default
     </section>
 
     <section id="tooling">
-      <h2>Ops &amp; Tooling</h2>
-      <p class="muted section-intro">Small tools I wrote for the client sites in Selected Work when nothing off the shelf did the job. I'm slowly cleaning them up so they work on other people's sites too.</p>
+      <h2>Custom Tools</h2>
+      <p class="muted section-intro">Small tools I wrote for the client sites in Selected Work when nothing off the shelf did the job. I'm working on cleaning them up to be generalizable beyond the sites they were initially made for.</p>
       {% for tool in site.data.tools %}
         <article class="entry" id="{{ tool.title | slugify }}">
           <h3>{{ tool.title }}</h3>

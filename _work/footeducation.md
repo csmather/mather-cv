@@ -2,10 +2,10 @@
 title: "FootEducation"
 order: 1
 external_url: "https://footeducation.com"
-thumb: "assets/screenshots/footeducation.png"
-screenshot: "assets/screenshots/footeducation.png"
+thumb: "assets/screenshots/footeducation.webp"
+screenshot: "assets/screenshots/footeducation.webp"
 tags: ["WordPress","Elementor","Apache","MySQL","AWS","DigitalOcean"]
-summary: "Patient-education site for foot and ankle conditions. I inherited it running pirated software behind a firewall it wasn't actually using. Cleaned it up, ended the crashes, and Google search clicks more than doubled the following year."
+description: "Patient-education site for foot and ankle conditions. I inherited it running pirated software behind a firewall it wasn't actually using. Cleaned it up, ended the crashes, and Google search clicks more than doubled the following year."
 ---
 
 ## [See Case Study](https://csmather.com/case-studies/site-ops/)

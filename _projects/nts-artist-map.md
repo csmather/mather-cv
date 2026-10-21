@@ -4,7 +4,7 @@ order: 2
 github_url: "https://github.com/csmather/nts-artist-map"
 external_url: "https://csmather.github.io/nts-artist-map/"
 tags: ["Python", "Data Science", "Web Crawling", "Music"]
-summary: "Sister project to Basilect Engine using a different signal: which artists NTS Radio hosts choose to play in the same show. I crawled 86,600 episodes, cleaned up 1.5 million messy artist names, and ranked 11 million artist pairs by how many different hosts put them together. There's an interactive map of the results."
+description: "Sister project to Basilect Engine using a different signal: which artists NTS Radio hosts choose to play in the same show. I crawled 86,600 episodes, cleaned up 1.5 million messy artist names, and ranked 11 million artist pairs by how many different hosts put them together. There's an interactive map of the results."
 ---
 
 ## The idea

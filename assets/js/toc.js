@@ -23,6 +23,12 @@
     targets.forEach(function (t) {
       if (t.el.getBoundingClientRect().top + window.scrollY <= y) active = t;
     });
+    // Short last sections can't scroll up to the line, so at the bottom of
+    // the page, highlight the last item.
+    var atBottom =
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 2;
+    if (atBottom) active = targets[targets.length - 1];
     targets.forEach(function (t) {
       t.link.classList.toggle('current', t === active);
     });
@@ -36,7 +42,8 @@
   update();
 
   // Open as a rail on desktop, collapsed as a drawer on mobile; a tap on any
-  // link closes the drawer behind you.
+  // link closes the drawer behind you. The HTML starts closed so phones don't
+  // flash an open drawer before this runs.
   var mq = matchMedia('(min-width: 76rem)');
   function sync() {
     toc.open = mq.matches;

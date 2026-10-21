@@ -2,10 +2,10 @@
 title: "Foot Pain Identifier"
 order: 4
 external_url: "https://footpainidentifier.com"
-thumb: "assets/screenshots/footpainidentifier.png"
-screenshot: "assets/screenshots/footpainidentifier.png"
+thumb: "assets/screenshots/footpainidentifier.webp"
+screenshot: "assets/screenshots/footpainidentifier.webp"
 tags: ["Laravel","PHP","Cloudflare","DigitalOcean","Security"]
-summary: "Symptom-checker survey app holding 10,000+ patient responses. It crashed regularly on a tiny server with no firewall. I found the cause, fixed it, locked the server down, and stopped a contact-form spam flood without making the form harder for patients to use."
+description: "Symptom-checker survey app holding 10,000+ patient responses. It crashed regularly on a tiny server with no firewall. I found the cause, fixed it, locked the server down, and stopped a contact-form spam flood without making the form harder for patients to use."
 ---
 
 ## [See Case Study](https://csmather.com/case-studies/site-ops/)

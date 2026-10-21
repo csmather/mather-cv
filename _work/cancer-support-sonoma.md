@@ -2,10 +2,10 @@
 title: "Cancer Support Sonoma"
 order: 5
 external_url: "https://cancersupportsonoma.org"
-thumb: "assets/screenshots/cancersupportsonoma.png"
-screenshot: "assets/screenshots/cancersupportsonoma.png"
+thumb: "assets/screenshots/cancersupportsonoma.webp"
+screenshot: "assets/screenshots/cancersupportsonoma.webp"
 tags: ["Wix","Redesign","UX","Consulting"]
-summary: "Volunteer redesign for a nonprofit that offers free wellness programs to people with cancer. I rebuilt the site around how clients actually look for services, and I still maintain it."
+description: "Volunteer redesign for a nonprofit that offers free wellness programs to people with cancer. I rebuilt the site around how clients actually look for services, and I still maintain it."
 ---
 
 ## What I did

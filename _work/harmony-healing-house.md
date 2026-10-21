@@ -2,10 +2,10 @@
 title: "Harmony Healing House"
 order: 7
 external_url: "https://harmonyhealinghouse.com"
-thumb: "assets/screenshots/hhh.png"
-screenshot: "assets/screenshots/hhh.png"
+thumb: "assets/screenshots/hhh.webp"
+screenshot: "assets/screenshots/hhh.webp"
 tags: ["WordPress","Redesign","Divi","Consulting"]
-summary: "Wellness organization in Sonoma Valley. I built and maintain the site, including a large directory of regional health resources that staff can keep adding to on their own."
+description: "Wellness organization in Sonoma Valley. I built and maintain the site, including a large directory of regional health resources that staff can keep adding to on their own."
 ---
 
 ## What I did

@@ -3,7 +3,7 @@ title: "airplop"
 order: 4
 github_url: "https://github.com/csmather/airplop"
 tags: ["GoLang", "Python", "Flask", "Networking"]
-summary: "Sends text and links from a PC to any iPhone on the LAN through a browser — no app install. Flask + Server-Sent Events out of WSL2, QR pairing, mDNS so the phone bookmark never goes stale. Later ported from Python to Go."
+description: "Sends text and links from a PC to any iPhone on the LAN through a browser — no app install. Flask + Server-Sent Events out of WSL2, QR pairing, mDNS so the phone bookmark never goes stale. Later ported from Python to Go."
 ---
 
 AirDrop doesn't exist between a Windows PC and an iPhone, and I got tired of emailing myself links. airplop is the fix: a small Flask server running in WSL2 that pushes whatever you paste to every connected phone in real time over Server-Sent Events. Both sides just open via a URL — no app, no account.

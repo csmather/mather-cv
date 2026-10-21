@@ -4,7 +4,7 @@ order: 3
 github_url: "https://github.com/csmather/phonetic-goblins"
 external_url: "https://csmather.github.io/phonetic-goblins/"
 tags: ["JavaScript", "HTML", "CSS", "Linguistics"]
-summary: "Generator of absurd character names built from weighted phoneme pools and fake-etymology suffix families. Vanilla JS with live frontend on GitHub Pages."
+description: "Generator of absurd character names built from weighted phoneme pools and fake-etymology suffix families. Vanilla JS with live frontend on GitHub Pages."
 ---
 
 I made up the term "phonetic goblin" to describe a word that sounds like a real word gone wrong. The good ones share traits: heavy consonant onsets (thr-, squ-, spl-), back vowels, chunky endings (-nd, -lch), and obvious pronunciation.

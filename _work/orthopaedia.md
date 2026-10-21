@@ -2,10 +2,10 @@
 title: "OrthoPaedia"
 order: 3
 external_url: "https://orthopaedia.com"
-thumb: "assets/screenshots/orthopaedia.png"
-screenshot: "assets/screenshots/orthopaedia.png"
+thumb: "assets/screenshots/orthopaedia.webp"
+screenshot: "assets/screenshots/orthopaedia.webp"
 tags: ["WordPress","Content Migration","WP-CLI","PHP"]
-summary: "Peer-reviewed online orthopedic textbook. Its physician editors couldn't change a page without going through a page-builder plugin, so I wrote a tool that moved all 266 pages to WordPress's native editor, and a second one that checked nothing got lost."
+description: "Peer-reviewed online orthopedic textbook. Its physician editors couldn't change a page without going through a page-builder plugin, so I wrote a tool that moved all 266 pages to WordPress's native editor, and a second one that checked nothing got lost."
 ---
 
 A peer-reviewed orthopedic textbook, about 266 pages, all built in the Elementor page builder. The physician editors couldn't change anything without working through the builder, and the builder was in the way.
@@ -18,4 +18,4 @@ A peer-reviewed orthopedic textbook, about 266 pages, all built in the Elementor
 - Deployed from staging to live with Elementor fully off sitewide. Also freed 5.6 GB of orphaned backup archives that had the hosting account at 99% capacity.
 
 ## Result
-The editors write directly in WordPress now. The migration tool is listed under Ops & Tooling.
+The editors write directly in WordPress now. The migration tool is listed under Custom Tools.

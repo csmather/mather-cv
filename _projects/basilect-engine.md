@@ -3,7 +3,7 @@ title: "Basilect Engine"
 order: 1
 github_url: "https://github.com/csmather/basilect-engine"
 tags: ["Python", "ML", "NLP", "Music"]
-summary: "Music recommendation engine that connects artists by how they talk about making music, using their own interview quotes, to find kinships that cross genre lines. The project that pulled me into machine learning and recommender-systems research."
+description: "Music recommendation engine that connects artists by how they talk about making music, using their own interview quotes, to find kinships that cross genre lines. The project that pulled me into machine learning and recommender-systems research."
 ---
 
 ## The idea

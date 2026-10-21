@@ -2,10 +2,10 @@
 title: "OrthoEducation"
 order: 2
 external_url: "https://orthoeducation.com"
-thumb: "assets/screenshots/orthoeducation.png"
-screenshot: "assets/screenshots/orthoeducation.png"
+thumb: "assets/screenshots/orthoeducation.webp"
+screenshot: "assets/screenshots/orthoeducation.webp"
 tags: ["WordPress Multisite","Elementor","MySQL","PHP","AI Knowledge Base"]
-summary: "Nine orthopedic patient-education sites sharing one WordPress install. The database had grown so bloated the host was throttling it. I also wrote a search plugin that covers the whole network and set up a knowledge base to be used by an AI chat assistant."
+description: "Nine orthopedic patient-education sites sharing one WordPress install. The database had grown so bloated the host was throttling it. I also wrote a search plugin that covers the whole network and set up a knowledge base to be used by an AI chat assistant."
 ---
 
 ## [See Case Study](https://csmather.com/case-studies/site-ops/)

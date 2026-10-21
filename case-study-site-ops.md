@@ -2,6 +2,7 @@
 layout: page
 title: "Case Study: Rescuing a Medical Education Network"
 permalink: /case-studies/site-ops/
+description: "Three neglected medical education sites: I found pirated software, ended the recurring crashes, cut the database bloat by more than half, and locked the servers down."
 ---
 
 ## The Gist
@@ -71,4 +72,4 @@ All three sites now back up their databases every night to off-server storage, k
 
 All of this ran on documentation: server maps, session logs, cleanup plans, and plain-language updates for the owner. That's how I kept three servers straight working solo, and it's how I work on everything - client work and personal projects alike.
 
-The tools I built along the way are described in more detail in [Ops & Tooling](/#tooling).
+The tools I built along the way are described in more detail in [Custom Tools](/#tooling).

@@ -2,10 +2,10 @@
 title: "BayHealth LLC"
 order: 6
 external_url: "https://bayhealthllc.com"
-thumb: "assets/screenshots/bayhealth.png"
-screenshot: "assets/screenshots/bayhealth.png"
+thumb: "assets/screenshots/bayhealth.webp"
+screenshot: "assets/screenshots/bayhealth.webp"
 tags: ["WordPress","Migration","Divi","Consulting"]
-summary: "Healthcare joint venture site. I moved it from a large agency's hosting to a smaller provider, then rebuilt it so the owners could edit it themselves instead of calling a developer."
+description: "Healthcare joint venture site. I moved it from a large agency's hosting to a smaller provider, then rebuilt it so the owners could edit it themselves instead of calling a developer."
 ---
 
 ## What I did

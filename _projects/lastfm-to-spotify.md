@@ -3,7 +3,7 @@ title: "lastfm-to-spotify"
 order: 5
 github_url: "https://github.com/csmather/lastfm-to-spotify"
 tags: ["Python", "APIs", "Algorithms", "Music"]
-summary: "CLI that pulls your Last.fm loved tracks into a new Spotify playlist, with date-range filtering and a calibration tool for tuning the fuzzy track matching."
+description: "CLI that pulls your Last.fm loved tracks into a new Spotify playlist, with date-range filtering and a calibration tool for tuning the fuzzy track matching."
 ---
 
 Years of loved tracks on Last.fm, no way to actually listen to them as a playlist. This pulls a user's loved tracks (optionally filtered by date range) and builds a new Spotify playlist from them.

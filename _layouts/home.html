@@ -4,7 +4,7 @@ layout: default
 
 <div class="wrap home layout">
 
-  <details class="toc" open>
+  <details class="toc">
     <summary>Contents</summary>
     <nav aria-label="Table of contents">
 
@@ -67,7 +67,7 @@ layout: default
         <article class="entry" id="{{ item.slug }}">
           <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
           <p class="tags">{{ item.tags | join: ' · ' }}{% if item.external_url %} · <a href="{{ item.external_url }}" target="_blank" rel="noopener">{{ item.external_url | replace: 'https://', '' | replace: 'http://', '' }} ↗</a>{% endif %}</p>
-          <p>{{ item.summary }}</p>
+          <p>{{ item.description }}</p>
         </article>
       {% endfor %}
     </section>
@@ -80,7 +80,7 @@ layout: default
         <article class="entry" id="{{ item.slug }}">
           <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
           <p class="tags">{{ item.tags | join: ' · ' }}{% if item.github_url %} · <a href="{{ item.github_url }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}{% if item.external_url %} · <a href="{{ item.external_url }}" target="_blank" rel="noopener">try it ↗</a>{% endif %}</p>
-          <p>{{ item.summary }}</p>
+          <p>{{ item.description }}</p>
         </article>
       {% endfor %}
       <p class="meta"><a href="https://github.com/csmather" target="_blank" rel="noopener">More on GitHub ↗</a></p>

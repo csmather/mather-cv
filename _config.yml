@@ -1,5 +1,5 @@
 title: "Scott Mather"
-description: "Oakland-based website administrator & developer."
+description: "Oakland web developer and admin, WordPress sites for health organizations"
 url: "https://csmather.com"   # custom domain, bound via the CNAME file
 baseurl: ""                   # empty because the custom domain serves from the root
 plugins:
